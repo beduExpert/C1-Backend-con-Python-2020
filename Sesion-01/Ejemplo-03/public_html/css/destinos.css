@@ -1,0 +1,144 @@
+
+#country-cover{
+  background-image: url(../img/img_cover_home.jpg);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  padding-left: 10%;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+  background-position: center;
+}
+
+#country-cover > * {
+  text-shadow: 8px 5px 7px #000, -2px -3px 7px #000;
+}
+
+
+#content {
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  wrap : wrap;
+}
+
+#column-left {
+  background-color: #EBE9EA;
+  border: 1px solid #D2D2D2;
+  border-radius: 8px 8px 8px 8px;
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  width: 20%;
+  height: auto;
+  list-style-type: none;
+  padding: 20px;
+}
+
+#column-left > div > ul{
+      list-style: none;
+}
+
+#central {
+  background-color: #EBE9EA;
+  border: 1px solid #D2D2D2;
+  border-radius: 8px 8px 8px 8px;
+  float: right;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 80%;
+}
+
+.searchbar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tour-container{
+  display:flex;
+  background-color: white;
+  margin: 15px;
+  justify-content: space-between;
+  height: 40vh;
+}
+
+.card-image-container{
+  width: 30%;
+}
+
+.card-image-container > img{
+  width: 100%;
+  height: 100%;
+}
+
+.card-image{
+  height: 100%;
+}
+
+.card-content{
+  display: flex;
+  padding: 10px 10px 0 10px;
+  margin: 5px;
+  width: 65%;
+  justify-content: space-between;
+}
+
+.card-content > div:first-child{
+  width: 80%;
+}
+
+.specific-info-tour{
+  color: grey;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.specific-info-tour > div > span{
+  margin-left: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+.table-info-tour{
+  width: 60%;
+  color: grey;
+  }
+
+.table-info-tour > tbody > tr > th{
+  text-align: left;
+  }
+
+.table-info-tour > tbody > tr > td{
+    text-align: right;
+  }
+
+
+.card-content > div:nth-child(2){
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 20px;
+}
+
+
+
+
+.button-tour{
+  padding: 7px 10px;
+  border: 1px solid #3eb368;
+  background: #3eb368;
+  color: #fff;
+  line-height: 17px;
+  border-radius: 3px;
+  text-align: center;
+}

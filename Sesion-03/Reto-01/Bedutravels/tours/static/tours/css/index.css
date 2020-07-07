@@ -1,0 +1,241 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer{
+  align-self: flex-end;
+  background: #24272a;
+  color: white;
+  margin-bottom: 0px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+nav{
+  background-color: #24272a;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > div > a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+nav .marca {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 20px;
+  margin-left: 20px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+footer{
+  height: 200px;
+  width: 100%;
+  background-color: #24272a;
+  display: flex;
+    align-items: center;
+}
+
+#bedu-logo{
+  margin-left: 20px;
+  width: 50px;
+}
+
+#home-cover{
+  background-image: url("../img/img_cover_home.jpg");
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+.social-media-container{
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.social-media-container > img{
+  width: 30px;
+  padding: 0 10px 0 10px;
+}
+
+.text-shadow{
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+}
+
+.title-font{
+  font-size: 30px;
+}
+
+.subtitle-font{
+  font-size: 20px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.margin-top-lg{
+  margin-top: 50px;
+}
+
+.margin-top-md{
+  margin-top: 30px;
+}
+
+.margin-top-sm{
+  margin-top: 15px;
+}
+
+.margin-bottom-md{
+  margin-bottom: 30px;
+}
+
+.margin-bottom-lg{
+  margin-bottom: 50px;
+}
+
+.margin-bottom-sm{
+  margin-bottom: 15px;
+}
+
+
+.padding-top-md{
+  padding-top: 30px;
+}
+
+.padding-top-lg{
+  padding-top: 50px;
+}
+
+.center-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.searchbar{
+    background-color: #fff;
+    padding-left: 10px;
+    padding: 3px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 5px;
+}
+
+.searchbar > input{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    border: none;
+    padding-left: 5px;
+}
+
+.searchbar > form > input{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  border: none;
+  padding-left: 5px;
+}
+
+.top-country-gridarea{
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+}
+
+.top-country-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.top-country-gridarea > div{
+  width: 24vw;
+  height: 30vh;
+
+}
+
+.top-country-gridarea > div > img{
+  width: 100%;
+  height: 80%;
+}
+
+.search-button{
+  height: 44px;
+  width: 45px;
+  color: white;
+  background-color: #303e48;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.text-style-none{
+  text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  nav{
+    justify-content: center;
+
+  }
+
+  nav > div{
+    display: none;
+
+  }
+
+  #home-cover{
+    height: 18vh;
+    background-position: -191px -193px;
+  }
+
+  #home-cover > div > p:first-child{
+    font-size: 40px;
+  }
+
+  #home-cover > div > p:nth-child(2){
+    display: none;
+  }
+
+  .top-country-gridarea {
+      grid-template-columns: 50vw 50vw;
+
+  }
+
+  .top-country-gridarea > div {
+    width: 40vw;
+    height: 30vh;
+}
+
+.title-font{
+  font-size: 50px;
+}
+
+
+}

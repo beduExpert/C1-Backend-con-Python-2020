@@ -1,0 +1,26 @@
+form{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+
+#forms-container{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form > input {
+  height: 20px;
+}
+
+.button-send-info{
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

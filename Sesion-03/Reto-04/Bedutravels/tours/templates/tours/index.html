@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Bedu Travels</title>
+    <link rel="stylesheet" href="/static/tours/css/index.css">
+    <link rel="stylesheet" href="/static/tours/css/destinos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="menu_main">
+        <a class="marca" href="#">
+          <strong>BEDUTRAVELS</strong>
+        </a>
+        <div>
+          <a href="">LogIn</a>
+          <a href="">SignIn</a>
+        </div>
+    </nav>
+
+    <section id="country-cover">
+        <h2>Tours</h2>
+        <h3>Destinos maravillosos para revitalizar el cuerpo y alimentar el alma</h3>
+    </section>
+
+    <section id="content">
+      <aside id="column-left">
+        <p class="margin-bottom-sm">Filtrar por:</p>
+        <input class="margin-bottom-sm" type="text" name="" value="">
+        <div class="margin-bottom-sm">
+          <p>Destinos</p>
+            <ul>
+              {% for zona in zonas %}
+              <li>
+                <input type="checkbox" id="fruit4" name="zona" value="{{ zona.id }}">
+                <label for="fruit4">{{ zona }}</label>
+              </li>
+              {% endfor %}
+            </ul>
+         </div>
+       </aside>
+
+       <section id="central">
+
+          {% for tour in tours %}
+          <div class="tour-container">
+            <div class="card-image-container">
+              <img src="{{ tour.img }}" alt="{{ tour }}">
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>{{ tour.nombre }}</h3>
+                <p class="margin-bottom-sm">
+                  {{ tour.descripcion }}
+                </p>
+
+                <table class="table-info-tour">
+                  <tbody>
+                    <tr>
+                      <th>Salida / Llegada </th>
+                      <td>{{ tour.zonaSalida }}/{{ tour.zonaLlegada }}</td>
+                    </tr>
+                    <tr>
+                      <th>Operador</th>
+                      <td>{{ tour.operador }}</td>
+                    </tr>
+                    <tr>
+                      <th>Tipo de tour</th>
+                      <td>{{ tour.tipoDeTour }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="">
+                <a href="/tour/{{ tour.id }}/">
+                  <button class="button-tour">Ver tour</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </section>
+
+      </section>
+
+      <footer class="margin-top-lg">
+        <ul>
+          <li>Bedu Travels</li>
+          <li>hola@bedutravels.com</li>
+        </ul>
+        <div class="social-media-container">
+          <img src="/static/tours/img/facebook.svg" alt="">
+          <img src="/static/tours/img/twitter.svg" alt="">
+          <img src="/static/tours/img/instagram.svg" alt="">
+        </div>
+      </footer>
+  </body>
+
+</html>
