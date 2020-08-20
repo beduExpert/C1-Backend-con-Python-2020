@@ -1,0 +1,236 @@
+[
+{
+    "model": "tours.user",
+    "pk": 1,
+    "fields": {
+        "nombre": "Hugo",
+        "apellidos": "Mc Pato",
+        "email": "hugo@patos.com",
+        "fechaNacimiento": "2018-08-21",
+        "genero": "H",
+        "clave": null,
+        "tipo": null
+    }
+},
+{
+    "model": "tours.user",
+    "pk": 2,
+    "fields": {
+        "nombre": "Paco",
+        "apellidos": "Mc Pato",
+        "email": "paco@patos.com",
+        "fechaNacimiento": "2018-12-21",
+        "genero": "H",
+        "clave": null,
+        "tipo": null
+    }
+},
+{
+    "model": "tours.user",
+    "pk": 3,
+    "fields": {
+        "nombre": "Daisy",
+        "apellidos": "Mc Pato",
+        "email": "daisy@patos.com",
+        "fechaNacimiento": "2019-01-01",
+        "genero": "M",
+        "clave": null,
+        "tipo": null
+    }
+},
+{
+    "model": "tours.zona",
+    "pk": 1,
+    "fields": {
+        "nombre": "Ciudad de M\u00e9xico",
+        "descripcion": "Ciudad de M\u00e9xico",
+        "latitud": null,
+        "longitud": null
+    }
+},
+{
+    "model": "tours.zona",
+    "pk": 2,
+    "fields": {
+        "nombre": "Yucat\u00e1n",
+        "descripcion": "Yucat\u00e1n",
+        "latitud": null,
+        "longitud": null
+    }
+},
+{
+    "model": "tours.zona",
+    "pk": 3,
+    "fields": {
+        "nombre": "Chiapas",
+        "descripcion": "Chiapas",
+        "latitud": null,
+        "longitud": null
+    }
+},
+{
+    "model": "tours.zona",
+    "pk": 4,
+    "fields": {
+        "nombre": "Guanajuato",
+        "descripcion": "Guanajuato",
+        "latitud": null,
+        "longitud": null
+    }
+},
+{
+    "model": "tours.tour",
+    "pk": 1,
+    "fields": {
+        "nombre": "Chiapas Hermoso",
+        "slug": "mexico",
+        "operador": "Viajeros x el mundo",
+        "tipoDeTour": "Tour en Grupo",
+        "descripcion": "Vive la naturaleza y disfruta de la aventura en la selva de Chiapas",
+        "img": "https://i.imgur.com/dp6ZqwA.jpg",
+        "pais": "M\u00e9xico",
+        "zonaSalida": 1,
+        "zonaLlegada": 3
+    }
+},
+{
+    "model": "tours.tour",
+    "pk": 2,
+    "fields": {
+        "nombre": "Guanajuato por siempre",
+        "slug": "mexico",
+        "operador": "Viajeros x el mundo",
+        "tipoDeTour": "Tour con acompa\u00f1ante",
+        "descripcion": "Enam\u00f3rate de Guanajuato, atr\u00e9vete a conocer las callejonadas y la m\u00fasica de esta hermosa ciudad",
+        "img": "https://i.imgur.com/CJ2kd4g.jpg",
+        "pais": "M\u00e9xico",
+        "zonaSalida": 1,
+        "zonaLlegada": 4
+    }
+},
+{
+    "model": "tours.tour",
+    "pk": 3,
+    "fields": {
+        "nombre": "Yucat\u00e1n y naturaleza",
+        "slug": "mexico",
+        "operador": "Viajeros x el mundo",
+        "tipoDeTour": "Tour en grupo",
+        "descripcion": "Impresi\u00f3nate por sus costas llenas de cultura maya y grandes templos",
+        "img": "https://i.imgur.com/tW6kq1x.jpg",
+        "pais": "M\u00e9xico",
+        "zonaSalida": 1,
+        "zonaLlegada": 2
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 1,
+    "fields": {
+        "fechaInicio": "2019-06-21",
+        "fechaFin": "2019-06-26",
+        "asientos": 15,
+        "precio": "1181.00",
+        "tour": 1
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 2,
+    "fields": {
+        "fechaInicio": "2019-07-03",
+        "fechaFin": "2019-07-08",
+        "asientos": 15,
+        "precio": "1181.00",
+        "tour": 1
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 3,
+    "fields": {
+        "fechaInicio": "2019-07-09",
+        "fechaFin": "2019-07-14",
+        "asientos": 10,
+        "precio": "1300.00",
+        "tour": 1
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 4,
+    "fields": {
+        "fechaInicio": "2019-07-21",
+        "fechaFin": "2019-07-26",
+        "asientos": 15,
+        "precio": "1200.00",
+        "tour": 2
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 5,
+    "fields": {
+        "fechaInicio": "2019-08-03",
+        "fechaFin": "2019-08-03",
+        "asientos": 15,
+        "precio": "1200.00",
+        "tour": 2
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 6,
+    "fields": {
+        "fechaInicio": "2019-08-03",
+        "fechaFin": "2019-08-03",
+        "asientos": 15,
+        "precio": "1200.00",
+        "tour": 2
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 7,
+    "fields": {
+        "fechaInicio": "2019-08-09",
+        "fechaFin": "2019-08-14",
+        "asientos": 15,
+        "precio": "1200.00",
+        "tour": 2
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 8,
+    "fields": {
+        "fechaInicio": "2019-08-22",
+        "fechaFin": "2019-08-26",
+        "asientos": 15,
+        "precio": "1500.00",
+        "tour": 3
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 9,
+    "fields": {
+        "fechaInicio": "2019-08-22",
+        "fechaFin": "2019-08-27",
+        "asientos": 25,
+        "precio": "1000.00",
+        "tour": 3
+    }
+},
+{
+    "model": "tours.salida",
+    "pk": 10,
+    "fields": {
+        "fechaInicio": "2019-09-13",
+        "fechaFin": "2019-09-19",
+        "asientos": 15,
+        "precio": "1500.00",
+        "tour": 3
+    }
+}
+]
