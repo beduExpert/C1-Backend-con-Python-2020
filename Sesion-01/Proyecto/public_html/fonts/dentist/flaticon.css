@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+	font-style: normal;
+}.flaticon-anesthesia:before {
+	content: "\e000";
+}
+.flaticon-apple53:before {
+	content: "\e001";
+}
+.flaticon-dental1:before {
+	content: "\e002";
+}
+.flaticon-dental2:before {
+	content: "\e003";
+}
+.flaticon-dentist11:before {
+	content: "\e004";
+}
+.flaticon-dentist12:before {
+	content: "\e005";
+}
+.flaticon-dentist13:before {
+	content: "\e006";
+}
+.flaticon-dentist14:before {
+	content: "\e007";
+}
+.flaticon-dentist15:before {
+	content: "\e008";
+}
+.flaticon-dentist16:before {
+	content: "\e009";
+}
+.flaticon-dentists:before {
+	content: "\e00a";
+}
+.flaticon-drop18:before {
+	content: "\e00b";
+}
+.flaticon-female205:before {
+	content: "\e00c";
+}
+.flaticon-first30:before {
+	content: "\e00d";
+}
+.flaticon-forceps:before {
+	content: "\e00e";
+}
+.flaticon-lifeline8:before {
+	content: "\e00f";
+}
+.flaticon-note29:before {
+	content: "\e010";
+}
+.flaticon-pill4:before {
+	content: "\e011";
+}
+.flaticon-tooth17:before {
+	content: "\e012";
+}
+.flaticon-tooth18:before {
+	content: "\e013";
+}
+.flaticon-tooth19:before {
+	content: "\e014";
+}
+.flaticon-tooth20:before {
+	content: "\e015";
+}
+.flaticon-toothbrush:before {
+	content: "\e016";
+}
+.flaticon-toothpaste:before {
+	content: "\e017";
+}
+.flaticon-zoom48:before {
+	content: "\e018";
+}

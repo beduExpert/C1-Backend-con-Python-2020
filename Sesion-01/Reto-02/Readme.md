@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Reto-02
+[`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto-02
 ## Iniciar la construcción de una aplicación web con Django
 
 ### OBJETIVOS
@@ -8,68 +8,25 @@
 
 #### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-03/Reto-02`
-1. Activar el entorno virtual __Bedutravels__
+1. Usar la carpeta de trabajo `Sesion-01/Reto-02`
+1. Activar el entorno virtual __Banco__
 
 #### DESARROLLO
-1. Crear la aplicación __perfiles__ con:
+1. Crear la aplicación ____ con:
 
    ```console
-   (Bedutravels) Reto-02/Bedutravels $ python manage.py startapp perfiles
-
-   (Bedutravels) Reto-02/Bedutravels $ tree
-   .
-   ├── Bedutravels
-   │   ├── __init__.py
-   │   ├── __pycache__
-   │   │   ├── __init__.cpython-37.pyc
-   │   │   └── settings.cpython-37.pyc
-   │   ├── settings.py
-   │   ├── urls.py
-   │   └── wsgi.py
-   ├── db.sqlite3
-   ├── manage.py
-   ├── perfiles
-   │   ├── admin.py
-   │   ├── apps.py
-   │   ├── __init__.py
-   │   ├── migrations
-   │   │   └── __init__.py
-   │   ├── models.py
-   │   ├── tests.py
-   │   └── views.py
-   ├── requeriments.txt
-   └── tours
-       ├── admin.py
-       ├── apps.py
-       ├── __init__.py
-       ├── migrations
-       │   └── __init__.py
-       ├── models.py
-       ├── __pycache__
-       │   ├── admin.cpython-37.pyc
-       │   ├── __init__.cpython-37.pyc
-       │   └── models.cpython-37.pyc
-       ├── tests.py
-       ├── urls.py
-       └── views.py
+   python3 manage.py startapp servicios
    ```
    ***
 
-1. Ejecutar el proyecto __Bedutravels__ con:
+1. Ejecutar el proyecto __Banco__ con:
 
    ```console
-   Reto-02/Bedutravels $ python manage.py runserver
-   [...]
-
-   June 19, 2019 - 10:38:22
-   Django version 2.2.2, using settings 'Bedutravels.settings'
-   Starting development server at http://127.0.0.1:8000/
-   Quit the server with CONTROL-C.   
+   python3 manage.py runserver  
    ```
    ***
 
-1. Agrega la aplicación __perfiles__ a la configuración en el archivo `Bedutravels/Bedutravels/settings.py`:
+1. Agrega la aplicación __servicios__ a la configuración en el archivo `Banco/Banco/settings.py`:
 
    ```python
    # Application definition
@@ -81,49 +38,49 @@
        'django.contrib.sessions',
        'django.contrib.messages',
        'django.contrib.staticfiles',
-       'tours',
-       'perfiles',
+       'tarjeta',
+       'servicios',
    ]   
    ```
    ***
 
-1. Mapear la url `/perfiles` con las rutas generales del proyecto __Bedutravels__ hacia las rutas de la aplicación __perfiles__
+1. Mapear la url `/servicios` con las rutas generales del proyecto __Banco__ hacia las rutas de la aplicación __servicios__
 
    ```
-   url / -> Bedutravels/Bedutravels/urls.py -> Bedutravels/perfiles/urls.py
+   url / -> Banco/Banco/urls.py -> Banco/servicios/urls.py
    ```
 
-   __En el archivo `Bedutravels/Bedutravels/urls.py` agregar lo siguiente:__
+   __En el archivo `Banco/Banco/urls.py` agregar lo siguiente:__
 
    ```python
    urlpatterns = [
-       path('admin/', admin.site.urls),
-       path('', include("tours.urls")),
-       path('perfiles/', include("perfiles.urls")),  # agregada
+		path('', include("tarjeta.urls")),
+   		path('servicios/', include("servicios.urls")), #agregada
+   		path('admin/', admin.site.urls),
    ]
    ```
    ***
 
-1. Mapear la url `/perfiles` con las rutas de la aplicación __perfiles__
+1. Mapear la url `/servicios` con las rutas de la aplicación __servicios__
 
    ```
-   url /perfiles -> Bedutravels/perfiles/urls.py -> Bedutravels/perfiles/views.py
+   url /perfiles -> Banco/servicios/urls.py -> Banco/servicios/views.py
    ```
 
-   __Crear el archivo `Bedutravels/perfiles/urls.py` con el siguiente contenido:__
+   __Crear el archivo `Banco/servicios/urls.py` con el siguiente contenido:__
 
    ```python
    from django.urls import path
    from . import views
 
    urlpatterns = [
-       path('', views.index, name='perfiles_index'),
+       path('', views.index, name='servicios_index'),
    ]
    ```
    Acuérdate de estar reiniciando Django para observar los resultados y mensajes de error.
    ***
 
-1. Agregar la función/vista `index` al archivo `Bedutravels/perfiles/views.py` con el siguiente contenido:
+1. Agregar la función/vista `index` al archivo `Banco/servicios/views.py` con el siguiente contenido:
 
    ```python
    from django.http import HttpResponse
@@ -131,16 +88,16 @@
 
    # Create your views here.
    def index(request):
-       """ Vista para atender la petición de la url /perfiles """
+       """ Vista para atender la petición de la url /servicios """
 
-       return HttpResponse("<h2>Soy la página de inicio de un perfil! Estoy viva!</h2>")
+         return HttpResponse("<h2>Soy la página de inicio de un servicio!</h2>")
    ```
 
    __Abrir la siguiente url en el navegador__
 
-   http://127.0.0.1:8000/perfiles
+   http://127.0.0.1:8000/servicios
 
    __El resultado debería ser el siguiente:__
 
-   ![Página perfiles](assets/perfiles-index-01.png)
+  ![](img/1.png)
    ***

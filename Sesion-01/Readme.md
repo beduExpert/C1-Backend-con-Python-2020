@@ -8,7 +8,6 @@
 
  - Entornos virtuales e instalación de Django
    - [Ejemplo 01](Ejemplo-01)
-   - [Reto 01](Reto-01)
  - Iniciar la construcción de una aplicación web con Django
    - [Ejemplo 02](Ejemplo-02)
    - [Reto 02](Reto-02)

@@ -1,5 +1,5 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Proyecto
-## Agregar la página de perfil de usuario a la aplicación web Bedutravels
+[`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto 3
+## Agregar la página de servicios a la aplicación web
 
 ### OBJETIVOS
 - Agregar páginas ya maquetadas por medio de las plantillas con Django.
@@ -9,94 +9,74 @@
 #### REQUISITOS
 1. Actualizar repositorio
 1. Usar la carpeta de trabajo `Sesion-03/Proyecto/Bedutravels/`
-1. Activar el entorno virtual __Bedutravels__
-1. Página de perfil de usuario maquetada del proyecto __Bedutravels__
+1. Activar el entorno 
+1. Página de servicios maquetada del proyecto 
 
-   ![perfil.html](assets/bedutravels-perfil-01.png)
+   ![](img/1.png)
 
 #### DESARROLLO
-1. Ejecutar el proyecto __Bedutravels__ con:
+1. Ejecutar el proyecto __Banco__ con:
 
    ```console
-   (Bedutravels) Proyecto/Bedutravels $ python manage.py runserver
-   [...]
-   June 19, 2019 - 10:38:22
-   Django version 2.2.2, using settings 'Bedutravels.settings'
-   Starting development server at http://127.0.0.1:8000/
-   Quit the server with CONTROL-C.   
+   python3 manage.py runserver   
    ```
    ***
 
-1. Haciendo uso de las plantillas de Django integrar la página de perfil de usuario que se encuentra en `public_html/perfil.html`.
+1. Haciendo uso de las plantillas de Django integrar la página de inicio maquetada que se encuentra en `public_html/servicios.html`.
 
-   __Crear las carpetas `Bedutravels/perfiles/templates/perfiles`:__
-
-   ```console
-   (Bedutravels) Proyecto/Bedutravels $ mkdir perfiles/templates
-   (Bedutravels) Proyecto/Bedutravels $ mkdir perfiles/templates/perfiles
-   ```
-
-   __Copiar el archivo `public_html/perfil.html` dentro de la carpeta `Bedutravels/perfiles/templates/perfiles/`:__
+   __Crear las carpetas `Banco/servicios/templates/servicios `:__
 
    ```console
-   (Bedutravels) Proyecto/Bedutravels $ cp ../public_html/perfil.html perfiles/templates/perfiles/
-
-   (Bedutravels) Proyecto/Bedutravels $ tree perfiles/templates/
-   .
-   └── perfiles
-       └── perfil.html
+   $ mkdir servicios/templates
+   $ mkdir servicios/templates/servicios
    ```
 
-   __Crear la función `perfil()` en el archivo `perfiles/views.py` para hacer uso de las plantillas (templates)__
+   __Copiar el archivo `public_html/servicios.html` dentro de la carpeta `Banco/servicios/templates/servicios/`:__
+
+   ```console
+   cp ../../public_html/servicios.html servicios/templates/servicios
+   ```
+
+   __Modificar la función `index()` en el archivo `servicios/views.py` para hacer uso de las plantillas (templates)__
 
    ```python
    from django.shortcuts import render
 
    # Create your views here.
-   def perfil(request):
-       """ Vista para atender la petición de la url /perfil """
-       return render(request, "perfiles/perfil.html")
+   def index(request):
+       """ Vista para atender la petición de la url / """
+       return render(request, "tarjeta/index.html")
    ```
+   
    Por omisión, Django busca los archivos html en la carpeta `proyecto/aplicacion/templates/aplicacion/`
 
    __El resultado en el navegador debería de ser el siguiente:__
 
-   ![perfil.html con plantillas](assets/bedutravels-perfil-02.png)
+   ![](img/2.png)
 
    Hasta aquí ya podemos ver el html, pero ¿y los estilos y las imágenes?
+
+   Como son archivos estáticos aún no hemos autorizado a que se puedan ver, así que continuemos.
    ***
 
 1. Agregando acceso a los archivos estáticos (ruta y vista)
 
-   __Crear la carpeta `Bedutravels/perfiles/static/perfiles/`:__
+   __Crear la carpeta `Banco/servicios/static/servicios/`:__
 
    ```console
-   (Bedutravels) Proyecto/Bedutravels $ mkdir perfiles/static
-   (Bedutravels) Proyecto/Bedutravels $ mkdir perfiles/static/perfiles
+   mkdir servicios/static
+   mkdir servicios/static/servicios
    ```
 
    __Copiar las carpetas de los archivos estáticos (css y img):__
 
-   ```console
-   (Bedutravels) Proyecto/Bedutravels $ cp -a ../public_html/css perfiles/static/perfiles/
+   __Finalmente hay que modificar la ruta en el archivo `servicios.html` para que usen el sistema de Django__
 
-   (Bedutravels) Proyecto/Bedutravels $ cp -a ../public_html/img perfiles/static/perfiles/
-
-   Sesion-03/Proyecto/Bedutravels $ tree -d 1 perfiles/static/perfiles/
-   perfiles/static/perfiles/
-   ├── css
-   └── img
-   ```
-
-   __Finalmente hay que modificar la ruta en el archivo `perfile.html` para que usen el sistema de Django__
-
-   Todas las url relativas o absolutas ahora tienen que ser absolutas e iniciar con `/static/perfiles/`, un ejemplos se muestra a continuación:
+   Todas las url relativas o absolutas ahora tienen que ser absolutas e iniciar con `/static/servicios/`, un ejemplos se muestra a continuación:
 
    ```html
    <!-- Animate.css -->
-   <link rel="stylesheet" href="/static/perfiles/css/index.css">
-   <!-- Icomoon Icon Fonts-->
-   <link rel="stylesheet" href="/static/perfiles/css/perfil.css">
+   <link rel="stylesheet" href="/static/servicios/css/index.css">
    ```
    Remplazar todas las coincidencias.
 
@@ -104,9 +84,11 @@
 
    Si no funciona:
    - Recargar la página forzado actualizar el cache del navegador con `Control+Shift+R`.
-   - En la ventana donde se está ejecutando el proyecto, detenerlo y volver a iniciarlo.
+   - En la ventana donde se está ejecutando el proyecto, deternlo y volver a iniciarlo.
    - Usar una ventana de incógnito.
-   - Pedir ayuda a un experto (que no vas a encontrar en clase!)
+   - Pedir ayuda a un experto (que no lo vas a encontrar en clase!)
 
    Si si funciona entonces:
-   - Misión cumplida! Ya eres Django Baby!
+   - Misión cumplida!
+
+![](img/3.png)

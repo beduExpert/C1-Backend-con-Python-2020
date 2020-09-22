@@ -1,4 +1,4 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Ejemplo-03
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-03
 ## Agregar la página de inicio ya maquetada a la aplicación web
 
 ### OBJETIVOS
@@ -8,46 +8,38 @@
 
 #### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-03/Ejemplo-03/Bedutravels/`
-1. Activar el entorno virtual __Bedutravels__
-1. Página de inicio maquetada del proyecto __Bedutravels__
+1. Usar la carpeta de trabajo `Sesion-01/Ejemplo-03/django/`
+1. Activar el entorno virtual __django__
+1. Página de inicio maquetada del proyecto __Banco__
 
-   ![index.html](assets/bedutravels-index-01.png)
+   ![](img/1.png)
 
 #### DESARROLLO
-1. Ejecutar el proyecto __Bedutravels__ con:
+1. Ejecutar el proyecto __Banco__ con:
 
    ```console
-   (Bedutravels) Ejemplo-03/Bedutravels $ python manage.py runserver
-   [...]
-   June 19, 2019 - 10:38:22
-   Django version 2.2.2, using settings 'Bedutravels.settings'
-   Starting development server at http://127.0.0.1:8000/
-   Quit the server with CONTROL-C.   
+   python3 manage.py runserver   
    ```
+   
+   ![](img/2.png)
    ***
 
 1. Haciendo uso de las plantillas de Django integrar la página de inicio maquetada que se encuentra en `public_html/index.html`.
 
-   __Crear las carpetas `Bedutravels/tours/templates/tours`:__
+   __Crear las carpetas `Banco/tarjeta/templates/tarjeta`:__
 
    ```console
-   (Bedutravels) Ejemplo-03/Bedutravels $ mkdir tours/templates
-   (Bedutravels) Ejemplo-03/Bedutravels $ mkdir tours/templates/tours
+   $ mkdir tarjeta/templates
+   $ mkdir tarjeta/templates/tarjeta
    ```
 
-   __Copiar el archivo `public_html/index.html` dentro de la carpeta `Bedutravels/tours/templates/tours/`:__
+   __Copiar el archivo `public_html/index.html` dentro de la carpeta `Banco/tarjeta/templates/tarjeta/`:__
 
    ```console
-   (Bedutravels) Ejemplo-03/Bedutravels $ cp ../public_html/index.html tours/templates/tours/
-
-   (Bedutravels) Ejemplo-03/Bedutravels $ tree tours/templates/
-   tours/templates/
-   └── tours
-       └── index.html
+   cp ../../public_html/index.html tarjeta/templates/tarjeta
    ```
 
-   __Modificar la función `index()` en el archivo `tours/views.py` para hacer uso de las plantillas (templates)__
+   __Modificar la función `index()` en el archivo `tarjeta/views.py` para hacer uso de las plantillas (templates)__
 
    ```python
    from django.shortcuts import render
@@ -55,13 +47,16 @@
    # Create your views here.
    def index(request):
        """ Vista para atender la petición de la url / """
-       return render(request, "tours/index.html")
+       return render(request, "tarjeta/index.html")
    ```
+   
+   ![](img/3.png)
+   
    Por omisión, Django busca los archivos html en la carpeta `proyecto/aplicacion/templates/aplicacion/`
 
    __El resultado en el navegador debería de ser el siguiente:__
 
-   ![index.html con plantillas](assets/bedutravels-index-02.png)
+   ![](img/4.png)
 
    Hasta aquí ya podemos ver el html, pero ¿y los estilos y las imágenes?
 
@@ -70,35 +65,24 @@
 
 1. Agregando acceso a los archivos estáticos (ruta y vista)
 
-   __Crear la carpeta `Bedutravels/tours/static/tours/`:__
+   __Crear la carpeta `Banco/tarjeta/static/tarjeta/`:__
 
    ```console
-   (Bedutravels) Ejemplo-03/Bedutravels $ mkdir tours/static
-   (Bedutravels) Ejemplo-03/Bedutravels $ mkdir tours/static/tours
+   mkdir tarjeta/static
+   mkdir tarjeta/static/tarjeta
    ```
 
    __Copiar las carpetas de los archivos estáticos (css y img):__
 
-   ```console
-   (Bedutravels) Ejemplo-03/Bedutravels $ cp -a ../public_html/css tours/static/tours/
-
-   (Bedutravels) Ejemplo-03/Bedutravels $ cp -a ../public_html/img tours/static/tours/
-
-   Sesion-03/Ejemplo-03/Bedutravels $ tree -d 1 tours/static/tours/
-   tours/static/tours/
-   ├── css
-   └── img
-   ```
+  ![](img/5.png)
 
    __Finalmente hay que modificar la ruta en el archivo `index.html` para que usen el sistema de Django__
 
-   Todas las url relativas o absolutas ahora tienen que ser absolutas e iniciar con `/static/tours/`, un ejemplos se muestra a continuación:
+   Todas las url relativas o absolutas ahora tienen que ser absolutas e iniciar con `/static/tarjeta/`, un ejemplos se muestra a continuación:
 
    ```html
    <!-- Animate.css -->
-   <link rel="stylesheet" href="/static/tours/css/index.css">
-   <!-- Icomoon Icon Fonts-->
-   <link rel="stylesheet" href="/static/tours/css/destinos.css">
+   <link rel="stylesheet" href="/static/tarjeta/css/index.css">
    ```
    Remplazar todas las coincidencias.
 
@@ -112,3 +96,5 @@
 
    Si si funciona entonces:
    - Misión cumplida!
+
+![](img/6.png)

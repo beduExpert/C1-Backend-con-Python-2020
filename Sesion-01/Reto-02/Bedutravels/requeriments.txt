@@ -1,4 +1,0 @@
-certifi==2019.3.9
-Django==2.2.2
-pytz==2019.1
-sqlparse==0.3.0

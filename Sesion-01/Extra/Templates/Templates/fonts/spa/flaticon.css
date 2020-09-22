@@ -1,0 +1,315 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 70px;
+font-style: normal;
+}.flaticon-33:before {
+	content: "\e000";
+}
+.flaticon-acupuncture:before {
+	content: "\e001";
+}
+.flaticon-aromatherapy1:before {
+	content: "\e002";
+}
+.flaticon-aromatherapy:before {
+	content: "\e003";
+}
+.flaticon-bamboo3:before {
+	content: "\e004";
+}
+.flaticon-bath3:before {
+	content: "\e005";
+}
+.flaticon-body6:before {
+	content: "\e006";
+}
+.flaticon-bottle22:before {
+	content: "\e007";
+}
+.flaticon-brochure5:before {
+	content: "\e008";
+}
+.flaticon-broom3:before {
+	content: "\e009";
+}
+.flaticon-candle2:before {
+	content: "\e00a";
+}
+.flaticon-candle3:before {
+	content: "\e00b";
+}
+.flaticon-choosing3:before {
+	content: "\e00c";
+}
+.flaticon-circular82:before {
+	content: "\e00d";
+}
+.flaticon-cocktail9:before {
+	content: "\e00e";
+}
+.flaticon-couple50:before {
+	content: "\e00f";
+}
+.flaticon-cup30:before {
+	content: "\e010";
+}
+.flaticon-deck:before {
+	content: "\e011";
+}
+.flaticon-drop12:before {
+	content: "\e012";
+}
+.flaticon-dropper6:before {
+	content: "\e013";
+}
+.flaticon-essential1:before {
+	content: "\e014";
+}
+.flaticon-essential:before {
+	content: "\e015";
+}
+.flaticon-facial3:before {
+	content: "\e016";
+}
+.flaticon-facial4:before {
+	content: "\e017";
+}
+.flaticon-fan6:before {
+	content: "\e018";
+}
+.flaticon-feet3:before {
+	content: "\e019";
+}
+.flaticon-feet4:before {
+	content: "\e01a";
+}
+.flaticon-female124:before {
+	content: "\e01b";
+}
+.flaticon-fern:before {
+	content: "\e01c";
+}
+.flaticon-fireplace:before {
+	content: "\e01d";
+}
+.flaticon-fish15:before {
+	content: "\e01e";
+}
+.flaticon-flowers6:before {
+	content: "\e01f";
+}
+.flaticon-flowers7:before {
+	content: "\e020";
+}
+.flaticon-fragrance:before {
+	content: "\e021";
+}
+.flaticon-glass12:before {
+	content: "\e022";
+}
+.flaticon-hair10:before {
+	content: "\e023";
+}
+.flaticon-hair11:before {
+	content: "\e024";
+}
+.flaticon-hair9:before {
+	content: "\e025";
+}
+.flaticon-hand70:before {
+	content: "\e026";
+}
+.flaticon-hand71:before {
+	content: "\e027";
+}
+.flaticon-hand73:before {
+	content: "\e028";
+}
+.flaticon-herbs:before {
+	content: "\e029";
+}
+.flaticon-human80:before {
+	content: "\e02a";
+}
+.flaticon-incense1:before {
+	content: "\e02b";
+}
+.flaticon-incense2:before {
+	content: "\e02c";
+}
+.flaticon-lemonade1:before {
+	content: "\e02d";
+}
+.flaticon-liquid5:before {
+	content: "\e02e";
+}
+.flaticon-logo7:before {
+	content: "\e02f";
+}
+.flaticon-logo8:before {
+	content: "\e030";
+}
+.flaticon-male151:before {
+	content: "\e031";
+}
+.flaticon-man182:before {
+	content: "\e032";
+}
+.flaticon-man185:before {
+	content: "\e033";
+}
+.flaticon-mask4:before {
+	content: "\e034";
+}
+.flaticon-massages1:before {
+	content: "\e035";
+}
+.flaticon-massages:before {
+	content: "\e036";
+}
+.flaticon-massage:before {
+	content: "\e037";
+}
+.flaticon-mineral:before {
+	content: "\e038";
+}
+.flaticon-mortar3:before {
+	content: "\e039";
+}
+.flaticon-nail2:before {
+	content: "\e03a";
+}
+.flaticon-natural3:before {
+	content: "\e03b";
+}
+.flaticon-nautilus:before {
+	content: "\e03c";
+}
+.flaticon-overcoat:before {
+	content: "\e03d";
+}
+.flaticon-perfume4:before {
+	content: "\e03e";
+}
+.flaticon-person198:before {
+	content: "\e03f";
+}
+.flaticon-person199:before {
+	content: "\e040";
+}
+.flaticon-plant24:before {
+	content: "\e041";
+}
+.flaticon-positive1:before {
+	content: "\e042";
+}
+.flaticon-sale4:before {
+	content: "\e043";
+}
+.flaticon-sandals:before {
+	content: "\e044";
+}
+.flaticon-scented1:before {
+	content: "\e045";
+}
+.flaticon-scented2:before {
+	content: "\e046";
+}
+.flaticon-scented:before {
+	content: "\e047";
+}
+.flaticon-shower6:before {
+	content: "\e048";
+}
+.flaticon-spa10:before {
+	content: "\e049";
+}
+.flaticon-spa11:before {
+	content: "\e04a";
+}
+.flaticon-spa12:before {
+	content: "\e04b";
+}
+.flaticon-spa13:before {
+	content: "\e04c";
+}
+.flaticon-spa1:before {
+	content: "\e04d";
+}
+.flaticon-spa2:before {
+	content: "\e04e";
+}
+.flaticon-spa3:before {
+	content: "\e04f";
+}
+.flaticon-spa4:before {
+	content: "\e050";
+}
+.flaticon-spa5:before {
+	content: "\e051";
+}
+.flaticon-spa6:before {
+	content: "\e052";
+}
+.flaticon-spa7:before {
+	content: "\e053";
+}
+.flaticon-spa8:before {
+	content: "\e054";
+}
+.flaticon-spa9:before {
+	content: "\e055";
+}
+.flaticon-spa:before {
+	content: "\e056";
+}
+.flaticon-star81:before {
+	content: "\e057";
+}
+.flaticon-swimming8:before {
+	content: "\e058";
+}
+.flaticon-tea10:before {
+	content: "\e059";
+}
+.flaticon-tea7:before {
+	content: "\e05a";
+}
+.flaticon-tea8:before {
+	content: "\e05b";
+}
+.flaticon-thermostat:before {
+	content: "\e05c";
+}
+.flaticon-thread4:before {
+	content: "\e05d";
+}
+.flaticon-towel:before {
+	content: "\e05e";
+}
+.flaticon-tree37:before {
+	content: "\e05f";
+}
+.flaticon-walkway:before {
+	content: "\e060";
+}
+.flaticon-water28:before {
+	content: "\e061";
+}
+.flaticon-wind18:before {
+	content: "\e062";
+}
+.flaticon-woman55:before {
+	content: "\e063";
+}

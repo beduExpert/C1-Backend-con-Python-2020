@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link href="css/style.css" rel="stylesheet">
+
+<link type="text/css" rel="stylesheet" href="syntaxh/css/shCoreDefault.css">
+<!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>-->
+
+
+
+
+</head>
+
+<body>
+
+<div class="page">
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-xs-2 left_sidebar">
+            <div class="left_block">
+                <div class="left_menu">
+                    <ul class="list-unstyled text-right">
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#html">HTML Structure</a></li>
+                        <li><a href="#css">CSS Files & Structure</a></li>
+                        <li><a href="#java">Javascript</a></li>
+                        <li><a href="#typo">Typography</a></li>
+                        <li><a href="#book">Booking Form</a></li>
+                        <li><a href="#sources">Sources & Credits</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-10 main_sidebar">
+        
+        	<section id="start">
+            	<h2>Berg - Multi-Purpose Onepage & Multipage Template</h2>
+                <hr>
+                
+                <p class="well">
+                Created: Jul 17, 2015<br>
+                Latest Update: Aug 08, 2015<br>
+                By: Maskan<br>
+                <a href="http://themeforest.net/user/maskan" target="_blank">http://themeforest.net/user/maskan</a><br>
+                Email: rodalermakov@gmail.com
+				</p>
+                <p>
+Thank you for purchasing this theme. If you have any questions that are beyond the scope of this help file, please feel free to email via the user page contact form on this page. <a href="http://themeforest.net/user/maskan" target="_blank">http://themeforest.net/user/maskan</a> Thanks so much!
+				</p>
+
+
+            </section>
+            
+
+
+          <section id="html">
+                
+
+
+            	<h2>HTML Structure</h2>
+                <hr>
+                <p>This theme is built upon bootstrap framework and is fully responsive. It adapts to window resolution and looks good on all devices including ipad and iphone.
+    See for yourself (resize your browser).</p>
+            <p class="well">
+    If you would like to read more about bootstrap framework click here :<br>
+                <a href="http://getbootstrap.com/css/"><b>Bootstrap Documentation</b></a>
+                </p>
+                
+                
+                <h3>Body Styles</h3>
+                <pre class="brush: html">
+                &lt;body class="no_passpartu">
+                </pre>
+                no_passpartu - Passpartu disable, also you must delete:<br />
+                <pre class="brush: html">
+                &lt;!-- Passpartu -->
+                &lt;div class="passpartu passpartu_left">&lt;/div>
+                &lt;div class="passpartu passpartu_right">&lt;/div>
+                &lt;div class="passpartu passpartu_top">&lt;/div>
+                &lt;div class="passpartu passpartu_bottom">&lt;/div>
+                &lt;!-- Passpartu End -->
+                </pre>
+
+                <pre class="brush: html">
+                &lt;body class="no_passpartu rounded">
+                </pre>
+                rounded - Rounded header and blocks
+
+                <pre class="brush: html">
+                &lt;body class="font-Mr-Dafoe passp_white">
+                </pre>
+                font-Mr-Dafoe - Titles font - Mr-Dafoe<br />
+                passp_white - White passpartu, also can be:<br />
+                passp_green, passp_pink, passp_light, passp_blue, passp_red, passp_purple, passp_black
+
+                <pre class="brush: html">
+                &lt;body class="no_passpartu gold_title font-Seaweed-Script rounded">
+                </pre>
+                font-Seaweed-Script - Titles font - Seaweed-Script<br />
+                gold_title - Gold Titles
+
+                
+                <h3>Header</h3>
+                <p>There are 5 versions of header:
+                    <br />
+                    White Header with Address Line (07_18_elements_header_white.html)<br />
+                    White Header without Address Line (07_19_elements_header_white_sml.html)<br />
+                    Dark Header with Address Line (07_20_elements_header_dark.html)<br />
+                    Dark Header without Address Line (07_21_elements_header_dark_sml.html)<br />
+                    Opacity Header (07_22_elements_header_opacity.html)<br />
+                    Rounded Opacity Header (07_23_elements_header_opacity_rounded.html)<br />
+                    Simple Header (02_02_multipage_construct.html)
+                </p>
+<pre class="brush: html">
+&lt;!-- Header -->
+&lt;header class="white_bck">
+
+    &lt;!-- Header Top Line -->
+    &lt;div class="top_line clearfix">
+
+        &lt;!-- Address -->
+        &lt;span class="tl_item">
+            &lt;span class="ti ti-location-pin">&lt;/span> Australia place nice, RD nice DHA Road, state pace 786
+        &lt;/span>
+
+        &lt;!-- Mail -->
+        &lt;span class="tl_item">
+            &lt;span class="ti ti-email">&lt;/span> &lt;a href="mailto:support@theberg.com">support@theberg.com&lt;/a>
+        &lt;/span>
+
+        &lt;!-- Phone -->
+        &lt;div class="pull-right">
+            &lt;span class="tl_item">
+                &lt;span class="ti ti-mobile">&lt;/span> +11 (0) 200 1111 001
+            &lt;/span>
+        &lt;/div>
+              
+    &lt;/div>
+    &lt;!-- Top Line End -->
+
+    &lt;!-- Logo -->
+    &lt;div class="logo pull-left">
+        &lt;a href="#">&lt;b>Berg Creative&lt;/b>&lt;/a>
+    &lt;/div>
+
+
+    &lt;!-- Header Buttons -->
+    &lt;div class="header_btns_wrapper">
+         
+
+        &lt;!-- Main Menu Btn -->
+        &lt;div class="main_menu">&lt;i class="ti-menu">&lt;/i>&lt;i class="ti-close">&lt;/i>&lt;/div>
+        
+        &lt;!-- Sub Menu -->
+        &lt;div class="sub_menu">
+            &lt;div class="sub_cont">
+                &lt;ul>
+                    &lt;li>&lt;a href="#welcome">About Us&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#team">Out Team&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#price">Price&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#portfolio">Portfolio&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#reviews">Reviews&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#news">News&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#contacts">Contacts&lt;/a>&lt;/li>
+
+                    &lt;!-- Search -->
+                    &lt;li class="right_sub no_arrow sub_min_width">&lt;a href="#" class="parents">&lt;i class="ti-search">&lt;/i>&lt;/a>
+                        &lt;ul class="mega_menu">
+                            &lt;li class="mega_sub bask_menu">
+                                &lt;form>
+                                    &lt;input type="text" class="form-control" placeholder="Enter Your Keywords">
+                                    &lt;button type="submit" class="se_btn">
+                                      &lt;i class="ti-search">&lt;/i>
+                                    &lt;/button>
+                                &lt;/form>
+                            &lt;/li>
+                        &lt;/ul>
+                    &lt;/li>
+                    &lt;!-- Search End-->
+
+                &lt;/ul>
+
+
+            &lt;/div>
+        &lt;/div>
+        &lt;!-- Sub Menu End -->
+
+    &lt;/div>
+    &lt;!-- Header Buttons End -->
+    
+    &lt;!-- Up Arrow -->
+    &lt;a href="#page" class="up_block go">&lt;i class="fa fa-angle-up">&lt;/i>&lt;/a>
+
+&lt;/header>
+&lt;!-- Header End -->
+</pre>
+
+                <h3>Intro (Slider)</h3>
+                <pre class="brush: html">
+&lt;!--Intro-->
+&lt;section class="intro" >
+
+    &lt;!-- Down Arrow -->
+    &lt;a href="#welcome" class="down_block go">&lt;i class="fa fa-angle-down">&lt;/i>&lt;/a>
+
+    &lt;!-- Wrapper -->
+    &lt;div class="intro_wrapper">
+
+        &lt;!-- Item -->
+        &lt;div class="intro_item">
+            &lt;!-- Over -->
+            &lt;div class="over" data-opacity="0.3" data-color="#000">&lt;/div>
+            &lt;!-- Image -->
+            &lt;div class="into_back image_bck" data-image="images/bus1.jpg">&lt;/div>
+            
+            &lt;!-- Text -->
+            &lt;div class="text_content">   
+                &lt;div class="intro_text intro_text_lc text-left text_up">
+                    &lt;span class="great_title">A small studio in New York making websites and killer apps.&lt;/span>
+                    &lt;span class="great_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.&lt;/span>
+                    &lt;span>&lt;a href="#" class="btn btn-white">See More&lt;/a>&lt;a href="#" class="btn btn-white">Purchase&lt;/a>&lt;/span>
+                &lt;/div>           
+            &lt;/div>  
+        &lt;/div>
+
+        &lt;!-- Item -->
+        &lt;div class="intro_item">
+            &lt;!-- Over -->
+            &lt;div class="over" data-opacity="0.4" data-color="#000">&lt;/div>
+
+            &lt;!-- Image -->
+            &lt;div class="into_back image_bck"  data-image="images/hotel2.jpg">&lt;/div>
+            
+            &lt;!-- Text -->
+            &lt;div class="text_content">
+                &lt;div class="intro_text intro_text_rc text-right text_small text_up">
+                    &lt;span class="great_title">Check out some of our latest and greatest projects&lt;/span>
+                    &lt;span class="great_subtitle great_subtitle_big">Consectetur adipisicing elit&lt;/span>
+                    &lt;span class="into_txt hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.&lt;/span>
+                    &lt;span class="intro_soc">
+                        &lt;a href="#">&lt;i class="ti-flickr">&lt;/i>&lt;/a>
+                        &lt;a href="#">&lt;i class="ti-facebook">&lt;/i>&lt;/a>
+                        &lt;a href="#">&lt;i class="ti-pinterest">&lt;/i>&lt;/a>
+                        &lt;a href="#">&lt;i class="ti-twitter">&lt;/i>&lt;/a>
+                    &lt;/span>
+                    &lt;span>&lt;a href="#" class="btn btn-white">See More&lt;/a>&lt;a href="#" class="btn btn-white">Purchase&lt;/a>&lt;/span>
+                &lt;/div> 
+            &lt;/div>  
+        &lt;/div>
+
+    &lt;/div>
+    &lt;!-- Wrapper End -->
+    
+&lt;/section>
+&lt;!-- Intro End -->
+                </pre>
+
+                <span class="great_title"><br />
+                great_title - Great Title, also can be (great_title_big, great_title_small)<br />
+
+                <span class="great_subtitle"><br />
+                great_subtitle - Great SubTitle, also can be (great_subtitle_big, great_subtitle_small)<br />
+                <br />
+                Titles alignment<br />
+                intro_text_rc - Right Center<br />
+                intro_text_rt - Right Top<br />
+                intro_text_rb - Right Bottom<br />
+                intro_text_lc - Left Center<br />
+                intro_text_lt - Left Top<br />
+                intro_text_lb - Left Bottom<br />
+                intro_text_cc - Center Center<br />
+                intro_text_ct - Center Top<br />
+                intro_text_cb - Center Bottom<br />
+                <br />
+                text_small - Size of text, also can be (text_big)<br /><br />
+                text_up - animation of the text
+
+				<h3>Sections classes</h3>
+                <p>
+                    bordered_block - block border<br />
+                    grey_border - grey 1px border<br />
+                    bordered_wht_border - white 1px border<br />
+                    white_txt - White Text<br />
+                    image_bck - Image or Color background<br /><br />
+                    <pre class="brush: html">
+                    &lt;section class="boxes simple_title image_bck" id="schedule" data-color="#292929">
+                    </pre>
+                    data-color="#292929" - Color of background
+                    <pre class="brush: html">
+                    &lt;section class="boxes image_bck hidden-xs hidden-sm" data-image="images/white_back.jpg">
+                    </pre>
+                    data-image="images/white_back.jpg" - Background Image
+                    <br />
+                    <pre class="brush: html">
+                    &lt;div class="over" data-color="#000" data-opacity="0.3">&lt;/div>
+                    </pre>
+                    over - Overlay<br />
+                    data-color="#000" - overlay colors<br />
+                    data-opacity="0.3" - overlay opacity<br />
+                    data-blend="multiply" - overlay blend mode<br />
+                    data-image="images/sky2.jpg" - overlay image
+                </p>
+                
+			
+
+            <h3>Logo</h3>
+            <p>You can edit all texts in logo.</p>
+<pre class="brush: html">
+&lt;!-- Logo -->
+&lt;div class="logo pull-left">
+    &lt;a href="#">&lt;b>Berg Creative&lt;/b>&lt;/a>
+&lt;/div>
+</pre>
+            <h3>Awesome Icons</h3>
+            <p>Awesome Icons Official Page - <a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a><br>
+			You can choose from 360+ available icons : </p>
+            <p>
+            <a target="_blank" href="images/icons-list.jpg">
+            	<img alt=" " src="images/icons-list-small.jpg">
+            </a>
+            </p>
+            <p>HTML markup:</p>
+<pre class="brush: html">
+&lt;!-- Awesome Icons -->
+&lt;i class="fa fa-cog">&lt;/i>
+</pre>         
+				<h3>FlatIcon Icons</h3>
+                <p>FlatIcon Icons Official Page - <a href="http://www.flaticon.com/" target="_blank">
+                http://www.flaticon.com/</a><br>
+                FlatIcons are used in all titles. 
+				</p>
+            	
+               	<p>Open this file - "theme"/fonts/build/flaticon.html to see all possible icons</p>
+                <p>"theme"/fonts/health/flaticon.html, "theme"/fonts/sound/flaticon.html, "theme"/fonts/spa/flaticon.html</p>
+               
+                <p>HTML markup:</p>
+<pre class="brush: html">
+&lt;!-- FlatIcons Icons -->
+&lt;i class="flaticon-anniversary1">&lt;/i>
+</pre> 
+
+				        
+            </section>
+            
+            <section id="css">
+            	<h2>CSS Files & Structure</h2>
+                <hr>
+                <p>All of the specific stylings for the page are in style.css ("theme"/css/style.css) file.</p>
+<pre class="brush:html">
+&lt;!-- Theme CSS -->
+&lt;link href="css/style.css" rel="stylesheet">
+</pre>    
+
+			<p>The file is separated into sections using:</p>   
+<pre class="brush:html">
+# 1. Main Styles
+# 2. Passpartu Green
+# 3. Passpartu Pink
+# 4. Passpartu Light
+# 5. Passpartu Blue
+# 6. Passpartu Red
+# 7. Passpartu Purple
+# 8. Passpartu Black
+# 9. Passpartu White
+# 10. Inside
+# 11. Rounded
+# 12. Products
+# 13. Comments
+# 14. font Mr Dafoe
+# 15. font-Seaweed-Script
+# 16. font-Roboto-Slab
+# 17. Wedding
+# 18. Header
+# 19. Header No Border
+# 20. Top Line
+# 21. Header White
+# 22. Header Black
+# 23. Portfolio
+# 24. Food
+# 25. Bootstrap
+# 26. Animations
+# 27. Intro
+# 28. Object Sliders
+# 29. Film Slider
+# 30. Sport Items
+# 31. Intro
+# 32. Boxes
+# 33. RSVP
+# 34. Over Animation
+# 35. Menu
+# 36. Zoom Animation
+# 37. Prices
+# 38. Reviews
+# 39. Title Block
+# 40. Medicine
+# 41. Spa
+# 42. Pricing Table
+# 43. Partners
+# 44. Tabs
+# 45. Footer
+# 46. Responsive
+
+</pre>            
+            	<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>   
+            </section>
+            
+            <section id="java">
+            	<h2>Javascript</h2>
+                <hr>
+                <p>All javascripts are placed in folder "theme"/js. In script.js file we implement all functions calls.
+This theme uses following Javascript files:</p>
+				<ul>
+                	<li>Bootstrap v 3 framework (powerful front-end framework for faster and easier web development)</li>
+                    <li>jQuery v1.11.0 (A fast javascript library that Foodtruckifies how to traverse HTML documents, handle events, perform animations.)</li>
+                    <li>OWL Carousel - Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.<br />
+                        Documentation:<a href="http://owlgraphic.com/owlcarousel/#how-to" target="_blank">http://owlgraphic.com/owlcarousel/#how-to</a>
+                    </li>
+                    <li>magnific-popup - A lightweight customizable lightbox plugin for jQuery<br />
+                    Documentation:<a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/</a>
+                    </li>
+                    <li>prefixfree -prefix-free lets you use only unprefixed CSS properties everywhere. It works behind the scenes, adding the current browser’s prefix to any CSS code, only when it’s needed. </li>
+                    <li>WOW - Reveal Animations When You Scroll<br />
+                        Documentation:<a href="http://mynameismatthieu.com/WOW/docs.html" target="_blank">http://mynameismatthieu.com/WOW/docs.html</a>
+                        
+                    </li>
+                    <li>JQuery CountDown - A jQuery plugin that sets a div or span to show a countdown to a given time.<br />
+                        Documentation:<a href="http://www.keith-wood.name/countdown.html" target="_blank">http://www.keith-wood.name/countdown.html</a>
+                    </li>
+                    <li>JQuery UI - jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.<br />
+                        Documentation:<a href="http://jqueryui.com/" target="_blank">http://jqueryui.com/</a>
+                    </li> 
+                    <li>Masonry - Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.<br />
+                        Documentation:<a href="http://masonry.desandro.com/" target="_blank">http://masonry.desandro.com/</a>
+                    </li>
+                    <li>jquery.mb.YTPlayer - An open source jQuery component to easily build your custom Youtube® player or to use a Youtube® video as background for your page.<br />
+                        Documentation:<a href="https://github.com/pupunzi/jquery.mb.YTPlayer" target="_blank">https://github.com/pupunzi/jquery.mb.YTPlayer</a>
+                    </li>             
+                </ul>
+
+				<h3>OWL Carousel</h3>
+                <p>Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.<br>
+				
+                </p>
+                <p>You don't need any special markup. All you need is to wrap your divs(owl works with any type element) inside the container element &lt;div class="owl-carousel">. Class "owl-carousel" is mandatory to apply proper styles that come from owl.carousel.css file.</p>
+<pre class="brush:html">
+&lt;div id="owl-example" class="owl-carousel">
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+&lt;div> Your Content &lt;/div>
+...
+&lt;/div>
+</pre>    
+<p>Now call the Owl initializer function and your carousel is ready.</p>
+<pre class="brush:html">
+$("#owl-example").owlCarousel();
+</pre>       
+			
+
+            
+                <h3>JQuery CountDown - A jQuery plugin that sets a div or span to show a countdown to a given time.</h3>
+                <p>Open file: 'theme'/js/script.js<br>
+                Find next line: /*CountDown*/<br>
+                /*CountDown*/
+                 $('.married_coundown').countdown({until: new Date(2015, 9, 19)});<br>
+                <br>
+                and edit date - Date(2015, 9, 19)
+                </p>
+                <p>
+                    A note on Date - the JavaScript Date constructor expects the year, month, and day as parameters. However, the month ranges from 0 to 11. To make explicit what date is intended (does a month of 3 mean March or April?) I specify the month from 1 to 12 and manually subtract the 1. Thus the following denotes 25 December, 2014.
+
+$(selector).countdown({since: new Date(2014, 12-1, 25)});
+                </p>
+
+               
+                
+
+                
+            </section>
+            
+            <section id="typo">
+            	<h2>Typography</h2>
+                <p>We use google font service to include fonts or font face sets. </p>
+                
+                <ul>
+                	<li><a href="https://www.google.com/fonts/specimen/Oswald" target="_blank">Oswald</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Open+Sans" target="_blank">Open Sans</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Roboto+Slab" target="_blank">Robot Slab</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Mr+Dafoe" target="_blank">Mr Dafoe</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Seaweed+Script" target="_blank">Seaweed Script</a></li>
+                </ul>
+   
+             
+               
+            
+            </section>
+            
+           <section id="book">
+                <h2>Booking Form</h2>
+                <hr>
+                <p>Template comes with ready to use Booking Form.
+                </p>
+                <p>To configure form just edit your HTML file and change e-mail to your own at these lines : </p>
+<pre class="brush:js">
+&lt;!-- Form -->
+&lt;form action="https://formspree.io/your@email.com" method="POST">
+
+</pre>
+The Booking Form used http://formspree.io/ script and doesn't need PHP.<br />                
+The Booking Form doesn't work on 'localhost'. Works only on host.                
+            </section>
+            
+          <section id="sources">
+            	<h2>Sources & Credits</h2>
+                <hr>
+            <p>The following sources and files have been used to build up this theme</p>
+              <ul>
+               	  <li>Twitter Bootstrap - <a href="http://twitter.github.com/bootstrap/" target="_blank">http://twitter.github.com/bootstrap/</a></li>
+                  <li>jQuery - <a href="http://www.jquery.com">http://www.jquery.com</a></li>
+                  <li>OWL Carusel - <a href="http://owlgraphic.com/owlcarousel/#how-to" target="_blank">http://owlgraphic.com/owlcarousel/#how-to</a></li>
+                  <li>Font-Awesome - <a href="http://fontawesome.io/" target="_blank">http://fontawesome.io/</a></li>
+                  <li>Flaticon Icons - <a href="http://flaticon.com" target="_blank">http://flaticon.com</a></li>
+
+
+                  <li>magnific-popup - <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/</a></li>
+                  <li>prefixfree - <a href="http://leaverou.github.io/prefixfree/" target="_blank">http://leaverou.github.io/prefixfree/</a></li>
+                  <li>JQuery UI - <a href="http://jqueryui.com/" target="_blank">http://jqueryui.com/</a></li>
+                  <li>JQuery CountDown - <a href="http://www.keith-wood.name/countdown.html" target="_blank">http://www.keith-wood.name/countdown.html</a></li>
+                  <li>Masonry - <a href="http://masonry.desandro.com/" target="_blank">http://masonry.desandro.com/</a></li>
+                  <li>WOW - <a href="http://mynameismatthieu.com/WOW/docs.html" target="_blank">http://mynameismatthieu.com/WOW/docs.html</a></li>
+                  <li>jquery.mb.YTPlayer - <a href="https://github.com/pupunzi/jquery.mb.YTPlayer" target="_blank">https://github.com/pupunzi/jquery.mb.YTPlayer</a>
+                    </li> 
+
+                  <li><a href="https://www.google.com/fonts/specimen/Oswald" target="_blank">Oswald</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Open+Sans" target="_blank">Open Sans</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Roboto+Slab" target="_blank">Robot Slab</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Mr+Dafoe" target="_blank">Mr Dafoe</a></li>
+                    <li><a href="https://www.google.com/fonts/specimen/Seaweed+Script" target="_blank">Seaweed Script</a></li>
+                  
+
+                  <li>Icons, textures - <a href="http://www.freepik.com">Designed by Freepik</a></li>
+                  <li>Photos:<br>
+
+					<a href="https://www.flickr.com/" target="_blank">Flickr.com</a><br/>
+                    <a href="http://graphicburger.com/" target="_blank">graphicburger.com</a><br/>
+                    <a href="http://dollarphotoclub.com/" target="_blank">dollarphotoclub.com</a><br />
+                    <a href="http://pixabay.com/" target="_blank">Pixabay</a><br />
+                    <a href="http://unsplash.com/" target="_blank">Unsplash</a><br />
+                    <a href="http://stocksnap.io/" target="_blank">stocksnap.io</a><br />
+                    Icons, textures - <a href="http://www.freepik.com">Designed by Freepik</a><br />
+                    <a href="https://www.flickr.com/photos/68711844@N07/" target="_blank">Food</a>
+                    <a href="https://www.flickr.com/photos/markjsebastian/" target="_blank">Music, Faces, People</a> 
+</li>
+
+
+                  	
+              </ul>
+              
+              <p>Once again, thank you so much for purchasing this theme. If you have any questions, feel free to email me via my user page <a href="http://themeforest.net/user/maskan" target="_blank">contact form</a>. </p>
+            </section>
+            
+        </div>
+    </div>
+</div>
+</div>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="syntaxh/js/shCore.js"></script>
+	<script type="text/javascript" src="syntaxh/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="syntaxh/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="syntaxh/js/shBrushXml.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</div>
+</body>
+</html>

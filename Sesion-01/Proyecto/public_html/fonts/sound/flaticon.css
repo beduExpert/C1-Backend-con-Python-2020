@@ -1,0 +1,105 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 60px;
+font-style: normal;
+}.flaticon-audio60:before {
+	content: "\e000";
+}
+.flaticon-disc31:before {
+	content: "\e001";
+}
+.flaticon-equalizer34:before {
+	content: "\e002";
+}
+.flaticon-equalizer35:before {
+	content: "\e003";
+}
+.flaticon-equalizer36:before {
+	content: "\e004";
+}
+.flaticon-equalizer37:before {
+	content: "\e005";
+}
+.flaticon-frequency1:before {
+	content: "\e006";
+}
+.flaticon-headphones41:before {
+	content: "\e007";
+}
+.flaticon-headset14:before {
+	content: "\e008";
+}
+.flaticon-instrument2:before {
+	content: "\e009";
+}
+.flaticon-microphone106:before {
+	content: "\e00a";
+}
+.flaticon-microphone107:before {
+	content: "\e00b";
+}
+.flaticon-microphone108:before {
+	content: "\e00c";
+}
+.flaticon-mobile_phone1:before {
+	content: "\e00d";
+}
+.flaticon-note50:before {
+	content: "\e00e";
+}
+.flaticon-note51:before {
+	content: "\e00f";
+}
+.flaticon-piano23:before {
+	content: "\e010";
+}
+.flaticon-pulse2:before {
+	content: "\e011";
+}
+.flaticon-radio56:before {
+	content: "\e012";
+}
+.flaticon-sound36:before {
+	content: "\e013";
+}
+.flaticon-sound37:before {
+	content: "\e014";
+}
+.flaticon-speaker118:before {
+	content: "\e015";
+}
+.flaticon-speaker119:before {
+	content: "\e016";
+}
+.flaticon-speaker120:before {
+	content: "\e017";
+}
+.flaticon-tape2:before {
+	content: "\e018";
+}
+.flaticon-voice36:before {
+	content: "\e019";
+}
+.flaticon-voice_recorder:before {
+	content: "\e01a";
+}
+.flaticon-volume58:before {
+	content: "\e01b";
+}
+.flaticon-volume59:before {
+	content: "\e01c";
+}
+.flaticon-volume60:before {
+	content: "\e01d";
+}

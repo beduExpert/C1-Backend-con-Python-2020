@@ -1,0 +1,132 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 60px;
+font-style: normal;
+}.flaticon-airplane127:before {
+	content: "\e000";
+}
+.flaticon-blacksmith:before {
+	content: "\e001";
+}
+.flaticon-bricks13:before {
+	content: "\e002";
+}
+.flaticon-butcher3:before {
+	content: "\e003";
+}
+.flaticon-carpenter1:before {
+	content: "\e004";
+}
+.flaticon-clothing78:before {
+	content: "\e005";
+}
+.flaticon-constructions5:before {
+	content: "\e006";
+}
+.flaticon-constructions6:before {
+	content: "\e007";
+}
+.flaticon-cut59:before {
+	content: "\e008";
+}
+.flaticon-cutting17:before {
+	content: "\e009";
+}
+.flaticon-gardening11:before {
+	content: "\e00a";
+}
+.flaticon-gardening12:before {
+	content: "\e00b";
+}
+.flaticon-hammer64:before {
+	content: "\e00c";
+}
+.flaticon-kitchenpack43:before {
+	content: "\e00d";
+}
+.flaticon-ladders1:before {
+	content: "\e00e";
+}
+.flaticon-machine5:before {
+	content: "\e00f";
+}
+.flaticon-mend:before {
+	content: "\e010";
+}
+.flaticon-paintbrush7:before {
+	content: "\e011";
+}
+.flaticon-painter22:before {
+	content: "\e012";
+}
+.flaticon-protection23:before {
+	content: "\e013";
+}
+.flaticon-repair27:before {
+	content: "\e014";
+}
+.flaticon-repair28:before {
+	content: "\e015";
+}
+.flaticon-repair29:before {
+	content: "\e016";
+}
+.flaticon-repair30:before {
+	content: "\e017";
+}
+.flaticon-repairing2:before {
+	content: "\e018";
+}
+.flaticon-repairing3:before {
+	content: "\e019";
+}
+.flaticon-schoolmaterial3:before {
+	content: "\e01a";
+}
+.flaticon-screwdriver4:before {
+	content: "\e01b";
+}
+.flaticon-tool80:before {
+	content: "\e01c";
+}
+.flaticon-tool81:before {
+	content: "\e01d";
+}
+.flaticon-tool82:before {
+	content: "\e01e";
+}
+.flaticon-tool83:before {
+	content: "\e01f";
+}
+.flaticon-tool84:before {
+	content: "\e020";
+}
+.flaticon-transport298:before {
+	content: "\e021";
+}
+.flaticon-transport302:before {
+	content: "\e022";
+}
+.flaticon-transport304:before {
+	content: "\e023";
+}
+.flaticon-woodcutting:before {
+	content: "\e024";
+}
+.flaticon-work36:before {
+	content: "\e025";
+}
+.flaticon-working13:before {
+	content: "\e026";
+}
