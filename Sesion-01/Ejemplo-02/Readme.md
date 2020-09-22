@@ -127,7 +127,7 @@
 
    __Crear el archivo `Banco/tarjeta/urls.py` con el siguiente contenido:__
    
-   ```
+   ```python
     from django.urls import path
 	 from . import views
 
