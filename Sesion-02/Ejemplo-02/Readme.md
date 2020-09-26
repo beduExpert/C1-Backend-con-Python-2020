@@ -1,78 +1,97 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-02
-## Operación READ: Lectura de datos con Python y MariaDB
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Ejemplo-02
 
-### OBJETIVO
-Conocer el procedimiento para realizar la operación __Read__ a una tabla en un servidor MariaDB desde Python para el proyecto Biblioteca.
+## Inicializando Django con MySQL
+
+### OBJETIVOS
+- Conocer el procedimiento para inicializar un servidor MySQL
+- Conocer el procedimiento para inicializar la base de datos.
+- Conocer el procedimiento para realizar una conexión a la base de datos con Django.
 
 #### REQUISITOS
-1. Contar con los datos de conexión a la base de datos Biblioteca.
-
-   __Host:__ localhost <br />
-   __User:__ Biblioteca <br />
-   __Password:__ Biblioteca <br />
-   __Base de datos:__ Biblioteca
-
-1. Usar la carpeta de trabajo `Sesion-01/Ejemplo-02`
-
-1. Contar con la tabla __Libro__ creada y con los datos contenidos en el archivo `sql/tabla-libro.sql`.
-
-   ![Tabla Libro](assets/tabla-libro.jpg)
-
-   Si no cuenta con la tabla, entonces inicializarla con el siguiente comando:
-   ```console
-   Sesion-01/Ejemplo-02 $ docker exec -i pythonsql mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca < sql/tabla-libro.sql
-
-   Sesion-01/Ejemplo-02 $
-   ```
-
-1. Instalar el módulo `mysql-connector-python` que será el responsable de permitir realizar una conexión a base de datos MySQL / MariaDB desde Python.
-
-   __Sito principal:__
-   https://dev.mysql.com/doc/connector-python/en/
-
-   __Instalación con el comando pip:__
-   ```console
-   $ pip install mysql-connector-python
-   Collecting mysql-connector-python
-   Using cached https://files.pythonhosted.org/packages/43/bd/43a128bbd6a3237d6f255c7afaa9308430d5c90f8db8371276169722f037/mysql_connector_python-8.0.16-cp37-cp37m-manylinux1_x86_64.whl
-   Requirement already satisfied: protobuf>=3.0.0 in /home/rctorr/miniconda3/lib/python3.7/site-packages (from mysql-connector-python) (3.7.1)
-   Requirement already satisfied: six>=1.9 in /home/rctorr/miniconda3/lib/python3.7/site-packages (from protobuf>=3.0.0->mysql-connector-python) (1.12.0)
-   Requirement already satisfied: setuptools in /home/rctorr/miniconda3/lib/python3.7/site-packages (from protobuf>=3.0.0->mysql-connector-python) (41.0.0)
-   Installing collected packages: mysql-connector-python
-   Successfully installed mysql-connector-python-8.0.16
-
-   $
-   ```
+1. [Mysql 5.7 ](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+1. [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) 
+1. Contar con el repositorio actualizado creado por el experto para este módulo.
+1. Abrir una terminal y posicionarse en la carpeta de trabajo
 
 ### DESARROLLO
- 1. __OPERACIÓN READ__ Crea el script `lista-registros.py` que imprima en formato texto en la salida estándar, la lista de registros de la tabla proporcionada como parámetro en la línea de comandos. Hacer uso de los módulos `click`, `mysql-connector-python` y `stdout`.
+1. En el Prework de la sesión identificamos cómo descargar e instalar MySQL en tu equipo y inicializarlo en nuestro sistema operativo, por lo cual iniciaremos nuestro gestor de base de datos.
 
- Aplicar el modelo MVC y todas las funciones que tengan que ver con la base de datos colocarlas dentro del script/módulo `modelomysql.py`.
+2. Una vez inicializado realizaremos la conexión con __MySQL Workbench__ 
 
-   __Caso: Ejecutando el script sin argumentos__
+	![](img/1.png)
 
-   ```console
-   Sesion-01/Ejemplo-02 $ python lista-registros.py
+3. Procederemos a generar un nuevo Schema, al cual le asignaremos el nombre de base_MySQL
 
-   Tablas disponibles
-   ------------------
-   Libro
-   ------------------
+	![](img/2.png)
+	![](img/3.png)
+	![](img/4.png)
+
+4. Para poder utilizar __MySQL__ en Django es necesario instalar un cliente para Python, por lo cual abriremos nuestro proyecto
+
+	```console
+   $ cd django
    ```
+   
+	![](img/5.png)
+	
+5. Recordemos que es importante activar nuestro entorno virtual
 
-   __Caso: Imprimiendo registros de la tabla Libro__
-
-   ```console
-   Sesion-01/Ejemplo-02 $ python lista-registros.py Libro
-
-   Tabla: Libro
-   ------------
-   Id | Titulo                 | Editorial   | NumPag | Autores
-    1 | Yo, Robot              | Gnome Press |    374 |       1
-    2 | El fin de la eternidad | Gnome Press |    191 |       1
-    3 | El arte de la guerra   | Obelisco    |    112 |       2
-   ------------
+	```console
+   $ source bin/activate
    ```
-   ***
+   ![](img/5.png)
+   
+6. Una vez activado procederemos a instalar __mysqlclient__ con el siguiente comando:
 
-__Nota:__ En la carpeta ya existe el script `stdout.py` que es un módulo que contiene la función `imprime_registros()` y se puede hacer uso de ella.
+	```console
+   $ pip3 install mysqlclient
+   ```
+   
+7. A continuación conectaremos con nuestra base de datos, primero tendremos que configurar los parámetros con la base de datos que creamos anteriormente en el Workbench de MySQL. Abriremos el documento __Banco/Banco/settings.py__ y buscaremos el siguiente bloque de código:
+
+	```python
+   DATABASES = {
+    	'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    	}
+	}
+   ```
+   
+   ![](img/8.png)
+   
+8. Como lo vimos en el ejemplo anterior Django trabaja por defecto con SQLite3, por lo que tendremos que modificarlo para que tenga la información de la base de datos que queremos conectar.
+
+	```python
+   DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'pruebamysql',
+            'USER': 'nombreusuario',
+            'PASSWORD': '',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+        }
+    }
+   ```
+   
+   ![](img/9.png)
+   
+9. Ya que tenemos todo configurado sólo queda realizar la migración de los modelos de la aplicación de Django. Abriremos nuestra terminal con el entorno activado y nos situaremos en la carpeta __banco__ seguido por el siguiente comando: 
+
+	```console
+   $ python3 manage.py migrate
+   ```
+   
+10. Visualizaremos la siguiente pantalla la cual confirma la migración fue realizada con exito:
+
+ 	 ![](img/10.png)
+ 	 
+11. Abriremos nuestro MySQLWorkbench y desplegaremos las tablas generadas por Django, comprobando que la configuración fue realizada con exito.
+
+	![](img/11.png)
+ 
+
+
+	
+

@@ -1,53 +1,96 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-03
-## Operación CREATE: Agregando datos con Python y MariaDB
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Ejemplo-03
 
-### OBJETIVO
-Conocer el procedimiento para realizar la operación __CREATE__ en una tabla con Python para el Ejemplo-03 Bibioteca.
+## Inicializando Django con PostgreSQL
 
-### REQUISITOS
-1. Contar con los datos de conexión a la base de datos Biblioteca.
+### OBJETIVOS
+- Conocer el procedimiento para inicializar un servidor PostgreSQL
+- Conocer el procedimiento para inicializar la base de datos.
+- Conocer el procedimiento para realizar una conexión a la base de datos con Django.
 
-   __Host:__ localhost
-   __User:__ Biblioteca \
-   __Password:__ Biblioteca \
-   __Base de datos:__ Biblioteca
-
-1. Contar con la tabla __Libro__ creada y con datos muestra en la base de datos:
-
-  ![Tabla Libro](assets/tabla-libro.jpg)
-
-1. Usar la carpeta de trabajo `Sesion-01/Ejemplo-03`
+#### REQUISITOS
+1. [PostgreSQL](https://www.postgresql.org)
+1. Contar con el repositorio actualizado creado por el experto para este módulo.
+1. Abrir una terminal y posicionarse en la carpeta de trabajo
 
 ### DESARROLLO
-1. __OPERACIÓN CREATE__ Crea el script `agrega-libro.py` y realiza las modificaciones en el script `modelomysql.py` para que se pueda agregar un nuevo registro a la tabla Libro en la base de datos Biblioteca desde la línea de comandos. Hacer uso de los módulos `click`, `mysql-connector-python` y `modelomysql`.
+1. En el Prework de la sesión identificamos cómo descargar e instalar __PostgreSQL__ en tu equipo y inicializarlo en nuestro sistema operativo, por lo cual iniciaremos nuestro gestor de base de datos.
+	
+	![](img/1.png)
+	![](img/2.png)
 
-   __Caso: Ejecutando el script sin argumentos__
+2. Procederemos a generar una nueva base de datos, al cual le asignaremos el nombre de __pruebapostgres__
 
-   ```console
-   Sesion-01/Ejemplo-03 $ python agrega-libro.py
-   Usage: agrega-libro.py [OPTIONS] TITULO EDITORIAL NUMPAG AUTORES
-   Try "agrega-libro.py --help" for help.
+	![](img/3.png)
+	![](img/4.png)
+	![](img/5.png)
 
-   Error: Missing argument "TITULO".
-  ```
+	
 
-   __Caso: Agregando un libro a la tabla__
+4. Para poder utilizar __PostgreSQL__ en Django es necesario instalar un cliente para Python, por lo cual abriremos nuestro proyecto. Recordemos que es importante activar nuestro entorno virtual
 
-   ```console
-   Sesion-01/Ejemplo-03 $ python agrega-libro.py "Un puente hacia el infinito" "Zeta Bolsillo" 409 1
-   Se ha agregado el registro ('Un puente hacia el infinito', 'Zeta Bolsillo', 409, '1') a la tabla Libro
-
-   Sesion-01/Ejemplo-03 $ python lista-registros.py Libro
-
-   Tabla: Libro
-   --------------
-   Id | Titulo                      | Editorial     | Numpag | Autores
-    1 | Yo, Robot                   | Gnome Press   |    374 |       1
-    2 | El fin de la eternidad      | Gnome Press   |    191 |       1
-    3 | El arte de la guerra        | Obelisco      |    112 |       2
-    4 | Un puente hacia el infinito | Zeta Bolsillo |    409 |       1
-   --------------
+	```console
+   $ cd django
    ```
-   ***
+   ```console
+   $ source bin/activate
+   ```
+   
+	![](img/6.png)
+	
+   
+6. Una vez activado procederemos a instalar __psycopg2__ con el siguiente comando:
 
-__Nota:__ Este reto se realiza en 15 mins.
+	```console
+   $ pip install psycopg2-binary
+   ```
+   
+   ![](img/7.png)
+   
+7. A continuación conectaremos con nuestra base de datos, primero tendremos que configurar los parámetros con la base de datos que creamos anteriormente en el Workbench de MySQL. Abriremos el documento __Banco/Banco/settings.py__ y buscaremos el siguiente bloque de código:
+
+	```python
+   DATABASES = {
+    	'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    	}
+	}
+   ```
+   
+   ![](img/8.png)
+   
+8. Como lo vimos en el ejemplo anterior Django trabaja por defecto con SQLite3, por lo que tendremos que modificarlo para que tenga la información de la base de datos que queremos conectar.
+
+	```python
+   DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'pruebapostgres',
+            'USER': 'postgres',
+            'PASSWORD': '',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
+        }
+    }
+   ```
+   
+   ![](img/9.png)
+   
+9. Ya que tenemos todo configurado sólo queda realizar la migración de los modelos de la aplicación de Django. Abriremos nuestra terminal con el entorno activado y nos situaremos en la carpeta __banco__ seguido por el siguiente comando: 
+
+	```console
+   $ python3 manage.py migrate
+   ```
+   
+10. Visualizaremos la siguiente pantalla la cual confirma la migración fue realizada con exito:
+
+ 	 ![](img/10.png)
+ 	 
+11. Abriremos nuestro gestor y desplegaremos las tablas generadas por Django, comprobando que la configuración fue realizada con exito.
+
+	![](img/11.png)
+ 
+
+
+	
+

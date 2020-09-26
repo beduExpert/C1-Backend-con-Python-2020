@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for debian-linux-gnu (x86_64)
 --
--- Host: 127.0.0.1    Database: BeduTravels
+-- Host: 127.0.0.1    Database: Banco
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.3.15-MariaDB-1:10.3.15+maria~bionic
 

@@ -7,10 +7,10 @@ Módulo encargado de realizar las operaciones a la base de datos MariaDB
 
 # Datos de conexión a la base de datos
 BD = {
-    "database":"BeduTravels",
+    "database":"Banco",
     "host":"localhost",
-    "user":"BeduTravels",
-    "password":"BeduTravels"
+    "user":"Banco",
+    "password":"Banco"
 }
 
 # zona de imports

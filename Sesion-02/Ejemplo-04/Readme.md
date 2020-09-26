@@ -1,49 +1,135 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-04
-## Automatizando la ejecución de archivos SQL con Python
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Ejemplo-04
 
-### OBJETIVO
-Conocer la forma de construir un script en Python para ejecutar instrucciones SQL por medio de archivos para el proyecto Biblioteca.
+## Inicializando un servidor MariaDB y una base de datos haciendo uso de contenedores
+
+### OBJETIVOS
+- Conocer el procedimiento para inicializar un servidor MariaDB usando contenedores con Docker.
+- Conocer el procedimiento para inicializar la base de datos.
+- Conocer el procedimiento para realizar una conexión a la base de datos.
 
 #### REQUISITOS
-1. Carpeta de repo actualizada
-1. Usar la carpeta de trabajo `Sesion-01/Ejemplo-04`
+1. Contar con Docker instalado
+1. Contar con el repositorio actualizado creado por el experto para este módulo.
+1. Abrir una terminal y posicionarse en la carpeta de trabajo `Backend-con-Python/Sesion-02/Ejemplo-04`:
 
-#### DESARROLLO
-1. Crear el script `sql2mysql.py` que reciba como parámetro el nombre de un archivo con extensión sql y ejecute las instrucciones en un servidor MariaDB.
+   ```console
+   $ cd Sesion-02/Ejemplo-04
 
-   __Ejecutando el script con el archivo `sql/tablas-inicial.sql`:__
+   Sesion-02/Ejemplo-04 $
+   ```
 
-    ```bash
-    Sesion-01/Ejemplo-04 $ python sql2mysql.py sql/tablas-inicial.sql
+### DESARROLLO
+1. Para poder hacer uso del servidor MariaDB por medio de Docker, lo primero que hay que hacer es descargar un archivo llamado imagen que contiene ya instalado MariaDB y usaremos la versión 10.3, por lo que usaremos el siguiente comando:
 
-    Se ha ejecutado el archivo sql/tablas-inicial.sql correctamente
-    ```
+   __Ejecución de comando en terminal:__
 
-    __Lista de los nuevos dos en las tablas:__
+   ```console
+   Sesion-02/Ejemplo-04 $ docker pull mariadb:10.3
+   10.3: Pulling from library/mariadb
+   6abc03819f3e: Pull complete
+   05731e63f211: Pull complete
+   0bd67c50d6be: Pull complete
+   ab62701212b1: Pull complete
+   b1f6f41348ef: Pull complete
+   3bdaf925d088: Pull complete
+   10ba8f10417b: Pull complete
+   3806bed5c691: Pull complete
+   24aae6d0fc18: Pull complete
+   9104943e23ec: Pull complete
+   ae510462589d: Downloading  71.32MB/74.34MB
+   ec23646ae61e: Download complete
+   3c301b916a4e: Download complete
+   Digest: sha256:db6e7bda67ea88efb00ba4ad82cb72dfee8938935914ae0948f6af523d398ca2
+   Status: Downloaded newer image for mariadb:10.3
 
-    ```bash
-    Sesion-01/Ejemplo-04 $ python lista-registros.py Libro
+   Sesion-02/Ejemplo-04 $  
+   ```
+   ***
+   
+   ![](img/1.png)
 
-    Tabla: Libro
-    ------------
-    Id | Titulo                                  | Editorial         | Numpag | Autores
-     1 | Yo, Robot                               | Gnome Press       |    374 |       1
-     2 | El fin de la eternidad                  | Gnome Press       |    191 |       1
-     3 | El arte de la guerra                    | Obelisco          |    112 |       2
-     4 | Las Bóvedas de acero                    | Debolsillo        |    272 |       1
-     5 | El sol desnudo                          | Debolsillo        |    288 |       1
-     6 | Halo Mythos. Guía a la historia de Halo | Altea             |    208 |       1
-     7 | Godel Escher Bach                       | Tusquets Editores |    480 |       1
-     8 | El Principito                           | Emece             |    112 |       1
-    ------------
-    ```
-    Ahora podemos usar este script para inicializar nuestras bases de datos en lugar de usar el comando con docker.
-    ***
+1. Responder a la pregunta ¿Qué es la arquitectura Cliente-Servidor? [Esto es una diapo]
 
-#### CASOS DE ÉXITO
-En la actualizad el uso de Python para la automatización de procesos está diversificada en todo el mundo, desde adquisición de datos en sondas meteorológicas, pasando por redes, orquestación de infraestructura, movil, web, desktop hasta en áreas como educación, cine, distribución de contenido o en la astronomía.
+   __Resultado__
 
-__Referencias:__
- 1. https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e
- 1. https://realpython.com/world-class-companies-using-python/
- 1. https://www.genbeta.com/desarrollo/netflix-explica-donde-como-utiliza-python-aprendizaje-automatico-automatizacion-pasando-seguridad
+   ![Arquitectura Cliente-Servidor](assets/arquitectura-cliente-servidor.png)
+   1. El Servidor presenta a todos los Clientes una interfaz única y bien definida.
+   2. El Cliente no necesita saber la lógica y el funcionamiento del Servidor.
+   3. El Cliente no depende de nada del Servidor, ni su ubicación, ni su tipo de equipo, ni su sistema operativo.
+   4. Los cambios en el Servidor implican pocos o ningún cambio a los Clientes.
+   5. Un Servidor puede atender a uno o más Clientes
+   ***
+
+1. Para crear un contenedor de un servidor de base de datos MariaDB son necesarios algunos parámetros, estos se pueden obtener desde el sitio de donde se descargó la imagen y otros se definen según la necesidad del proyecto:
+
+   https://hub.docker.com/_/mariadb
+
+   Entonces, antes de continuar se establecen los siguientes datos:
+   - __Host:__ localhost (-h)
+   - __User:__ root (-u)
+   - __Password:__ pythonsql (-p, MYSQL_ROOT_PASSWORD)
+   - __Nombre de contenedor:__ pythonsql (--name)
+   - __Puerto:__ 3306 (-p)
+
+   __El contenedor se crea con el siguiente comando:__
+
+   ```console
+   
+   $ docker create --name pythonsql -e MYSQL_ROOT_PASSWORD=pythonsql -p 3306:3306 mariadb:10.3
+   2bc444c9f01b9d157ac0e6bf13ce042cee1b7556ba328169453fea8800d285b1
+
+   Sesion-02/Ejemplo-02 $
+   ```
+   ***
+   
+   ![](img/2.png)
+
+1. Para iniciar el servidor MariaDB hay que iniciar el contenedor llamado __pythonsql__:
+
+   ```console
+   Sesion-02/Ejemplo-02 $ docker start pythonsql
+   pythonsql
+   Sesion-02/Ejemplo-02 $ docker ps
+   CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+46304152770a        mariadb:10.3        "docker-entrypoint.s…"   7 days ago          Up 26 hours         0.0.0.0:3306->3306/tcp   pythonsql
+   ```
+   ***
+   
+   ![](img/3.png)
+   ![](img/4.png)
+
+1. Para inicializar la base de datos se ejecuta el comando `mysql` haciendo uso del contenedor Docker, leyendo las instrucciones SQL desde el archivo `sql/biblioteca.sql` usando los datos definidos anteriomente.
+
+   __El comando a ejecutar es:__
+   ```console
+   Sesion-02/Ejemplo-04 $ docker exec -i pythonsql mysql -hlocalhost -uroot -ppythonsql < sql/biblioteca.sql
+
+   Sesion-02/Ejemplo-04 $
+   ```
+
+   En apariencia no ha sucedido nada, pero con este comando se ha creado la base de datos para el proyecto Biblioteca con los siguientes datos:
+   - __Host:__ localhost
+   - __User:__ Biblioteca
+   - __Pass:__ Biblioteca
+   - __Base:__ Biblioteca
+   ***
+
+1. Para validar que la base de datos se haya inicializado de forma correcta se realiza una conexión a la base de datos con el siguiente comando:
+
+  ```console
+  Sesion-02/Ejemplo-04 $ docker exec -it pythonsql mysql -hlocalhost -uBiblioteca -pBilioteca Biblioteca
+  Welcome to the MariaDB monitor.  Commands end with ; or \g.
+  Your MariaDB connection id is 9
+  Server version: 10.3.15-MariaDB-1:10.3.15+maria~bionic mariadb.org binary distribution
+
+  Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+  Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+  MariaDB [Biblioteca]> EXIT;
+
+  Sesion-02/Ejemplo-04 $
+  ```
+  ***
+
+Si has llegado hasta este punto __FELICIDADES__, toma un respiro o ayuda a algún compañero que no lo haya logrado aún

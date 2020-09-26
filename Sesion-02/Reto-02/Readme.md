@@ -1,23 +1,23 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto-02
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Reto-02
 ## Operación READ: Lectura de datos con Python y MariaDB
 
 ### OBJETIVO
-Realizar la operación __Read__ a una tabla en un servidor MariaDB desde Python para el proyecto BeduTravels
+Realizar la operación __Read__ a una tabla en un servidor MariaDB desde Python para el proyecto Banco
 
 #### REQUISITOS
-1. Contar con los datos de conexión a la base de datos BeduTravels.
+1. Contar con los datos de conexión a la base de datos Banco.
 
    __Host:__ localhost
-   __User:__ BeduTravels \
-   __Password:__ BeduTravels \
-   __Base de datos:__ BeduTravels
+   __User:__ Banco \
+   __Password:__ Banco \
+   __Base de datos:__ Banco
 
-1. Usar la carpeta de trabajo `Sesion-01/Reto-02`
+1. Usar la carpeta de trabajo `Sesion-02/Reto-02`
 
    ```console
-   $ cd Sesion-01/Reto-02
+   $ cd Sesion-02/Reto-02
 
-   Sesion-01/Reto-02 $
+   Sesion-02/Reto-02 $
    ```
 
 1. Crear la tabla __Usuario__ e insertar datos desde el archivo `sql/tabla-usuario.sql`
@@ -25,9 +25,9 @@ Realizar la operación __Read__ a una tabla en un servidor MariaDB desde Python 
    ![Tabla Usuario](assets/tabla-usuario.jpg)
 
    ```console
-   Sesion-01/Reto-02 $ docker exec -i pythonsql mysql -hlocalhost -uroot -ppythonsql < sql/tabla-usuario.sql
+   Sesion-02/Reto-02 $ docker exec -i pythonsql mysql -hlocalhost -uroot -ppythonsql < sql/tabla-usuario.sql
 
-   Sesion-01/Reto-02 $
+   Sesion-02/Reto-02 $
    ```
 
 ### DESARROLLO
@@ -36,7 +36,7 @@ Realizar la operación __Read__ a una tabla en un servidor MariaDB desde Python 
    __Caso: Ejecutando el script sin argumentos__
 
    ```console
-   Sesion-01/Reto-02 $ python lista-registros.py
+   Sesion-02/Reto-02 $ python lista-registros.py
 
    Tablas disponibles
    ------------------
@@ -47,7 +47,7 @@ Realizar la operación __Read__ a una tabla en un servidor MariaDB desde Python 
    __Caso: Imprimiendo registros de la tabla Usuario__
 
    ```console
-   Sesion-01/Reto-02 $ python lista-registros.py Usuario
+   Sesion-02/Reto-02 $ python lista-registros.py Usuario
 
    Tabla: Usuario
    --------------
