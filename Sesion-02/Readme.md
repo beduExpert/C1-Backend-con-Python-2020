@@ -23,7 +23,6 @@ El alumno identificará las bases de datos compatibles con Django, instalará e 
    - [Reto 03](Reto-03)
  - Automatizando la ejecución de archivos SQL con Python
    - [Ejemplo 07](Ejemplo-07)
-   - [Reto 04](Reto-04)
 
 ### POSTWORK
  - Bases de datos relacionales con Python y MariaDB aplicado a tú Proyecto.
