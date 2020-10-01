@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Reto-02
+[`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Reto-02
 ## Creando relaciones con el modelo de datos de Django
 
 ### OBJETIVO
@@ -6,7 +6,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-04/Reto-02`
+1. Usar la carpeta de trabajo `Sesion-03/Reto-02`
 1. Diagrama del modelo entidad-relación para el proyecto __Bedutravels__
 
    ![Modelo entidad-relación para Bedutravels](assets/bedutravels-modelo-er.png)

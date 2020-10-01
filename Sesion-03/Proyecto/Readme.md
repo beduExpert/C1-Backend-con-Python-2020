@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Proyecto
+[`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Proyecto
 ## Definiendo y agregando una página con formulario de la aplicación web
 
 ### OBJETIVO
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-04/Proyecto`
+1. Usar la carpeta de trabajo `Sesion-03/Proyecto`
 1. Diagrama del modelo entidad-relación para el proyecto __Bedutravels__
 
    ![Modelo entidad-relación para Bedutravels](assets/bedutravels-modelo-er.png)

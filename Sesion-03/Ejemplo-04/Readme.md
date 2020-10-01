@@ -1,4 +1,4 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Ejemplo-04
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Ejemplo-04
 ## El sistema de plantillas de Django
 
 ### OBJETIVO
@@ -8,7 +8,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-04/Ejemplo-04`
+1. Usar la carpeta de trabajo `Sesion-03/Ejemplo-04`
 1. Diagrama del modelo entidad-relación para el proyecto __Bedutravels__
 
    ![Modelo entidad-relación para Bedutravels](bedutravels-modelo-er.png)

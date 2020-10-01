@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Reto-03
+[`Backend con Python`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Reto-03
 ## Definiendo las consultas usando el ORM de Django
 
 ### OBJETIVO
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-04/Reto-03`
+1. Usar la carpeta de trabajo `Sesion-03/Reto-03`
 1. Diagrama del modelo entidad-relación para el proyecto __Bedutravels__
 
    ![Modelo entidad-relación para Bedutravels](assets/bedutravels-modelo-er.jpg)
