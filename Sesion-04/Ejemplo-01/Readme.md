@@ -10,7 +10,9 @@
 1. Usar la carpeta de trabajo `Sesión-04/Ejemplo-01`
 1. Diagrama del modelo entidad-relación para el proyect __Bedutravels__
 
-   ![Modelo entidad-relación para Bedutravels](/assets/bedutravels-modelo-er.png)
+
+![Modelo entidad-relación para Bedutravels](assets/bedutravels-modelo-er.png)
+
 
 ### DESARROLLO
 1. Conociendo el modelo User de Django:
