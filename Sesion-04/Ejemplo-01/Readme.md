@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-01
+[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Ejemplo-01
 ## Definiendo y agregando autenticación de entrada usando el modelo User de Django
 
 ### OBJETIVO
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Clase-10/Ejemplo-01`
+1. Usar la carpeta de trabajo `Sesión-04/Ejemplo-01`
 1. Diagrama del modelo entidad-relación para el proyect __Bedutravels__
 
    ![Modelo entidad-relación para Bedutravels](assets/bedutravels-modelo-er.jpg)

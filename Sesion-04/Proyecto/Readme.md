@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Proyecto
+[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Proyecto
 ## Definiendo elementos necesarios para otorgar permisos para eliminar datos.
 
 ### OBJETIVO
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-05/Proyecto`
+1. Usar la carpeta de trabajo `Sesion-04/Proyecto`
 1. Los requerimientos consisten en que en base al maquetado de la página web de inicio mostrado en la imagen, realizar lo siguiente:
    - La opción para borrar un registro sólo aparece si el usuario pertenece al grupo __editores__
    - En cuando se dé click en el botón __Eliminar tour__, se hará una llamada a la url `/tour/eliminar/idTour/` para eliminar el Tour seleccionado.

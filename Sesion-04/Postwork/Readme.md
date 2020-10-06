@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Postwork
+[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Postwork
 ## Aplicar los conceptos de la clase a tú Postwork.
 
 ### OBJETIVO
@@ -8,7 +8,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-05/Postwork`
+1. Usar la carpeta de trabajo `Sesion-04/Postwork`
 1. Contar con tú Proyecto ya en Django mostrando página de inicio con lista de registros cuando menos.
 1. Contar con el maquetado del la página de `login.html`
 

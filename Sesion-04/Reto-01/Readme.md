@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Reto-01
+[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Reto-01
 ## Definiendo y agregando autenticación de salida usando el modelo User de Django
 
 ### OBJETIVO
@@ -6,7 +6,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-05/Reto-01`
+1. Usar la carpeta de trabajo `Sesion-04/Reto-01`
 
 ### DESARROLLO
 1. Agrega la ruta para la url `/logout/`

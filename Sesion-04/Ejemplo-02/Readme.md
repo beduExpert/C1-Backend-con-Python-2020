@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-02
+[`Backend con Python`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Ejemplo-02
 ## Definiendo y agregando autenticación de entrada usando la vista auth_views.login de Django.
 
 ### OBJETIVO
@@ -6,7 +6,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-05/Ejemplo-02`
+1. Usar la carpeta de trabajo `Sesion-04/Ejemplo-02`
 
 ### DESARROLLO
 1. Modificar la ruta `/login` para hacer uso de la vista de Django
