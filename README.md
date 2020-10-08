@@ -13,5 +13,5 @@
  - [Sesión 4](Sesion-04): Class Based Views,User Authentication y plugins
  - [Sesión 5](Sesion-05): Django REST Framework
  - [Sesión 6](Sesion-06): GraphQL
- - [Sesión 7](Sesion-07):Deploy: Heroku, AWS
+ - [Sesión 7](Sesion-07): Deploy: Heroku, AWS
  - [Sesión 8](Sesion-08): Debug, Testing y Seguridad
