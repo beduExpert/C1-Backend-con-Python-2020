@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-07/Ejemplo-01`
+1. Usar la carpeta de trabajo `Sesion-06/Ejemplo-01`
 1. Activar el entorno virtual __BeduTravels__
 1. __Django Graphene__ es un módulo construido encima de __Django__ que simplifica la creación de un API GraphSQL con todos los requerimientos que requiere. Algunas referencias son:
   - Sitio principal: https://github.com/graphql-python/graphene-django
@@ -21,7 +21,7 @@
 1. __INSTALACIÓN__ de Django Graphene se realiza con el comando pip de la siguiente forma:
 
    ```console
-   (BeduTravels) Sesion-07/Ejemplo-01 $ pip install graphene-django
+   (BeduTravels) Sesion-06/Ejemplo-01 $ pip install graphene-django
    Collecting graphene-django
      Downloading https://files.pythonhosted.org/packages/f6/b2/557c2d6f16dac23622eb3227e11d20384f3eb9210e2403d736211f7d2e51/graphene_django-2.4.0-py2.py3-none-any.whl (66kB)
         |████████████████████████████████| 71kB 438kB/s
@@ -55,15 +55,15 @@
    Installing collected packages: rx, six, promise, graphql-core, graphql-relay, aniso8601, graphene, singledispatch, graphene-django
    Successfully installed aniso8601-6.0.0 graphene-2.1.7 graphene-django-2.4.0 graphql-core-2.2.1 graphql-relay-2.0.0 promise-2.2.1 rx-1.6.1 singledispatch-3.4.0.3 six-1.12.0
 
-   (BeduTravels) Sesion-07/Ejemplo-01 $
+   (BeduTravels) Sesion-06/Ejemplo-01 $
    ```
 
    __Se actualiza el archivo `requeriments.txt` para incluir el módulo instalado:__
 
    ```console
-   (BeduTravels) Sesion-07/Ejemplo-01 $ pip freeze > BeduTravels/requeriments.txt
+   (BeduTravels) Sesion-06/Ejemplo-01 $ pip freeze > BeduTravels/requeriments.txt
 
-   (BeduTravels) Sesion-07/Ejemplo-01 $ cat BeduTravels/requeriments.txt
+   (BeduTravels) Sesion-06/Ejemplo-01 $ cat BeduTravels/requeriments.txt
    aniso8601==6.0.0
    certifi==2019.3.9
    chardet==3.0.4

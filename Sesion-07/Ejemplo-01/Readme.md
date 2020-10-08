@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 08`](../Readme.md) > Ejemplo-01
+[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Ejemplo-01
 ## Proveedores, requisitos, registro y bases de datos.
 
 ### OBJETIVOS
@@ -8,7 +8,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-08/Ejemplo-01`
+1. Usar la carpeta de trabajo `Sesion-07/Ejemplo-01`
 
 ### DESARROLLO
 1. Algunos proveedores que pueden ser usados para hospedar nuestra aplicación creada con Python son:

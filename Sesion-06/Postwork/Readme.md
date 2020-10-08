@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Postwork
+[`Backend con Python`](../../Readme.md) > [`Sesión 06`](../Readme.md) > Postwork
 ## Aplicar los conceptos de la clase a tú Proyecto
 
 ### OBJETIVOS
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-07/Postwork`
+1. Usar la carpeta de trabajo `Sesion-06/Postwork`
 
 ### DESARROLLO
 1. __INSTALACIÓN__ de Django Graphene se realiza con el comando `pip install graphene-django`

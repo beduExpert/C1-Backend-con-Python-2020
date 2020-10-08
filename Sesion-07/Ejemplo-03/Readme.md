@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 08`](../Readme.md) > Ejemplo-03
+[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Ejemplo-03
 ## El archivo `settings.py` para desarrollo y producción.
 
 ### OBJETIVOS

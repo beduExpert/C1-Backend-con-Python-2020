@@ -1,26 +1,22 @@
 `Fullstack con Python` > [`Backend con Python`](../Readme.md) > `Sesión 05`
-## Django REST Framework (Serializadores, Generic Field, Viewsets)
-
+## Django Rest Framework
 
 ### OBJETIVOS
-El alumno instalará el Framework de Django Rest para crear un API con operaciones CRUD haciendo uso de los modelos del proyecto
-
+- Conocer Django Rest Framework
+- Crear una API para realizar operaciones CRUD a los modelos del proyecto Bedutravels usando Django Rest Framework
 
 ### ORGANIZACIÓN DE CLASE
 
- - Conociendo el protocolo HTTP por medio de una micro aplicación Python
+ - Conociendo e instalando Django Rest Framework
    - [Ejemplo 01](Ejemplo-01)
-   - [Reto 01](Reto-01)
- - Conociendo la interface WSGI por medio de la aplicación web "hola mundo" con Python.
+ - Creando un API para realizar las operaciones CRUD de una tabla tipo catálogo.
    - [Ejemplo 02](Ejemplo-02)
- - Conociendo la interface WSGI creando una micro aplicación web con Python.
+   - [Reto 02](Reto-02)
+ - Creando un API para realizar las operaciones CRUD de una tabla con relaciones uno a muchos.
    - [Ejemplo 03](Ejemplo-03)
-   - [Reto 03](Reto-03)
- - Introducción a los micro frameworks creando la micro aplicación "hola mundo" con Bottle.
-   - [Ejemplo 04](Ejemplo-04)
- - Conociendo los micro frameworks creando una micro aplicación web con Bottle.
+ - Creando un API para realizar las operaciones CRUD de una tabla
    - [Proyecto](Proyecto)
 
 ### POSTWORK
- - Aplicar los conceptos de la clase a un Proyecto
+ - Aplicar los conceptos de la clase a tú Proyecto
    - [Ver lineamientos](Postwork)

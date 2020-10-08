@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 08`](../Readme.md) > Ejemplo-02
+[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Ejemplo-02
 ## Preparando entorno de producción en el hospedaje del Proveedor.
 
 ### OBJETIVOS
@@ -8,7 +8,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-08/Ejemplo-02`
+1. Usar la carpeta de trabajo `Sesion-07/Ejemplo-02`
 
 ### DESARROLLO
 El subir los archivos de nuestra aplicación se puede realizar de varias formas, pero la más recomendada por la cantidad de archivos y para el manejo de versiones es hacer uso de git.
@@ -18,9 +18,9 @@ El subir los archivos de nuestra aplicación se puede realizar de varias formas,
    __Copiar la carpeta `Bedutravels` fuera dela carpeta de la carpeta del repo:__
 
    ```console
-   Backend-con-Python/Sesion-08/Ejemplo-02 $ cp -a Bedutravels ../../../
+   Backend-con-Python/Sesion-07/Ejemplo-02 $ cp -a Bedutravels ../../../
 
-   Backend-con-Python/Sesion-08/Ejemplo-02 $ cd ../../..
+   Backend-con-Python/Sesion-07/Ejemplo-02 $ cd ../../..
 
    $ cd Bedutravels
 

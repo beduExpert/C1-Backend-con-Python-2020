@@ -1,82 +1,148 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Ejemplo-02
-## Conociendo la interface WSGI por medio de la aplicación web "hola mundo" con Python.
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-02
+## Creando un API para realizar las operaciones CRUD de una tabla tipo catálogo.
 
-### OBJETIVO
-Comprender el flujo de información entre un servidor web y una aplicación en Python por medio de la interface WSGI (Web Server Gateway Interface).
+### OBJETIVOS
+- Configurar Django Rest Framework
+- Definir la url para el modelo __User__ en el __API__
+- Integrar Django Rest Framework en el proyecto Bedutravels
+- Realizar operaciones de CRUD vía API
 
-#### REQUISITOS
+### REQUISITOS
 1. Actualizar repositorio
-1. Revisar diagrama del flujo de la interface WSGI [Ver diapo.]
-1. La interface WSGI es un estándar y su especificación puede ser encontrada en:
-   - https://www.python.org/dev/peps/pep-3333/
-   - https://wsgi.readthedocs.io/en/latest/index.html
-   - http://wsgi.tutorial.codepoint.net/
-1. Usar el módulo __wsgiref__ que es parte de la librería estándar de Python y su documentación está en:
-   - https://docs.python.org/3.7/library/wsgiref.html
+1. Usar la carpeta de trabajo `Sesion-05/Ejemplo-02`
+1. Activar el entorno virtual __Bedutravels__
+1. Diagrama de entidad-relación del proyecto Bedutravels
 
-#### DESARROLLO
-1. Entendiendo la interface WSGI: Creando la aplicación web en la carpeta `webapp/` con el nombre `holamundo.py` con el siguiente contenido:
+   ![Diagrama entidad-relación](assets/bedutravels-modelo-er.png)
 
-    ```python
-    #!/usr/bin/env python
-    # -*- coding: utf-8 -*-
+### DESARROLLO
+1. Agregando Django Rest Framework a la configuración en el archivo `settings.py` como una aplicación adicional:
 
-    from wsgiref.simple_server import make_server
-
-    # Función de inicio para nuestra aplicación y siempre lleva los
-    # parámetros environ y start_response.
-    def hola_mundo_app(environ, start_response):
-        status = '200 OK'  # HTTP Status
-        # HTTP Headers a incluir en la respuesta
-        headers = [('Content-type', 'text/html; charset=utf-8')]
-        start_response(status, headers)
-
-        # Se regresa el contenido de la respuesta
-        return ["""
-        <html>
-            <body>
-                <h1>Hecho con Python</h1>
-                <h3>Hecho con <3</h3>
-                <hr />
-                <p>Hola mundo!</p>
-            </body>
-        </html>
-        """]
-
-    if __name__ == "__main__":
-        # Si es un escript creamos nuestro propio servidor, de lo contrario un servidor externo
-        # será el encargado de llamar a la app vía WSGI
-        port = 8000
-        host = "localhost"
-        with make_server(host, port, hola_mundo_app) as httpd:
-            print("Esuchando en {}:{}... [Presiona Ctrol+C para terminar!]".format(host, port))
-
-            # Esuchando peticiones hasta que se mate el proceso
-            httpd.serve_forever()    
-    ```
-
-1. Entendiendo la interface WSGI: Iniciando un micro servidor web con Python
-
-   __Cambiarse a la carpeta `webapp`:__
-   ```console
-   Sesion-02/Ejemplo-02 $ cd webapp
-   Sesion-02/Ejemplo-02/webapp $
+   ```python
+   INSTALLED_APPS = [
+       'django.contrib.admin',
+       'django.contrib.auth',
+       'django.contrib.contenttypes',
+       'django.contrib.sessions',
+       'django.contrib.messages',
+       'django.contrib.staticfiles',
+       'bedutravels',
+       'rest_framework',
+   ]
    ```
-
-   __Crear el servidor con la instrucción:__
-   ```console
-   Sesion-02/Ejemplo-02/webapp $ python holamundo.py
-   Esuchando en localhost:8000... [Presiona Ctrol+C para terminar!]
-   ```
-   El servidor se inicia en todas las ¿interfaces? del equipo en el puerto 8000 quedando en espera de peticiones hasta que se presione Control+C.
-
-   Se puede acceder abriendo la siguiente url en algún navegador:
-   - http://localhost:8000
-
-1. Entendiendo la interface WSGI: Solicitando el archivo `python-logo.png`:
-
-   El servidor web por medio de la interface WSGI lo que hace es mostrar sólamente la información que la webapp `holamundo.py` tiene definido y peticiones a otros archivos o aplicaciones no está permitido o como en esta caso, son simplemente ignoradas. Por ejemplo abrir la siguiente url en el navegador y comentar el resultado:
-   - http://localhost:8000/python-logo.png
-
-   Notar que el archivo `python-logo.png` se encuentra en la misma carpeta.
    ***
+
+1. Se crea la ruta para la url `/api/users` modificando el archivo `Bedutravels/Bedutravels/urls.py`:
+
+   ```python
+   # Imports
+   from django.contrib.auth import views as auth_views
+   from django.urls import path, include
+   from rest_framework import routers
+
+   from . import views
+
+   # Agregando rutas para django rest
+   router = routers.DefaultRouter()
+   router.register(r'users', views.UserViewSet)
+   [...]
+   # Rutas para la url /api/
+   path("api/", include(router.urls)),
+   # Rutas para la autenticación url /api/auth/
+   path("api/auth/", include("rest_framework.urls", namespace="rest_framework")),
+   [...]
+   ```
+   ***
+
+1. Se crea la vista para el api de la tabla __User__ aunque en este caso en lugar de generar y regresar HTML será JSON.
+
+   __Abrir el archivo `Bedutravels/tours/views.py` y agregar el siguiente contenido:__
+
+   ```python
+   # Imports
+   from django.contrib.auth import authenticate, login, logout
+   from django.contrib.auth.decorators import login_required
+   from django.shortcuts import render, redirect
+
+   from .models import User, Zona, Tour, Opinion, Salida
+   from .serializers import UserSerializer
+
+   from rest_framework import viewsets
+
+   import datetime
+
+   [...al final agregar...]
+   # Vistas basadas en clases para Django Rest
+   class UserViewSet(viewsets.ModelViewSet):
+      """
+      API que permite realizar operaciones en la tabla User
+      """
+      # Se define el conjunto de datos sobre el que va a operar la vista,
+      # en este caso sobre todos los users disponibles.
+      queryset = User.objects.all().order_by('id')
+      # Se define el Serializador encargado de transformar la peticiones
+      # en formato JSON a objetos de Django y de Django a JSON.
+      serializer_class = UserSerializer
+   ```
+   ***
+
+1. Se crea el serializador `UserSerializer` en el archivo `Bedutravels/tours/serializers.py`.
+
+   ```python
+   from rest_framework import serializers
+
+   from .models import User
+
+   class UserSerializer(serializers.HyperlinkedModelSerializer):
+       """ Serializador para atender las conversiones para User """
+       class Meta:
+           # Se define sobre que modelo actua
+           model = User
+           # Se definen los campos a incluir
+           fields = ('id', 'nombre', 'apellidos', 'email', 'fechaNacimiento', 'genero', 'clave', 'tipo')
+   ```
+   ***
+
+1. Acceso y uso de la __API__ `/api/users`
+
+   __Para tener acceso al API abrir la siguiente url:__
+
+   http://localhost:8000/api/users/
+
+   Se deberá de observar algo similar a lo siguiente:
+
+   ![bedutravels API Users](assets/api-users-01.png)
+
+   __Agregando un nuevo usuario vía web:__
+
+   ![Agregando usuario vía web](assets/api-users-02.png)
+
+   ![User agregado](assets/api-users-03.png)
+
+   __Agregando un nuevo usuario vía consola:__
+
+   ```console
+   (Bedutravels) Ejemplo-02 $ curl -d '{"nombre": "Donald", "apellidos": "Mac Pato", "email":"donald@pato.org", "fechaNacimiento":"2000-01-01", "genero": "H"}' -H 'Content-Type: application/json' http://localhost:8000/api/users/
+   {"id":5,"nombre":"Donald","apellidos":"Mac Pato","email":"donald@pato.org","fechaNacimiento":"2000-01-01","genero":"H","clave":null,"tipo":null}
+
+   (Bedutravels) Ejemplo-02 $
+   ```
+   Notar que esto genera una petición POST y como resultado se obtiene el usuario agregado con el id asignado.
+
+   También se puede verificar actualizando la lista de Users en la vista del api del navegador.
+
+   __Creando el usuario Pluto vía consola:__
+
+   ```console
+   (Bedutravels) Ejemplo-02 $ curl -d '{"nombre": "Pluto", "apellidos": "Mac Perro", "email":"pluto@pato.org", "fechaNacimiento":"2000-01-01", "genero": "H"}' -H 'Content-Type: application/json' http://localhost:8000/api/users/
+   {"id":6,"nombre":"Pluto","apellidos":"Mac Perro","email":"pluto@pato.org","fechaNacimiento":"2000-01-01","genero":"H","clave":null,"tipo":null}
+   ```
+
+   __Eliminando el usuario Pluto vía consola:__
+
+   ```console
+   (Bedutravels) Ejemplo-02 $ curl -X DELETE http://localhost:8000/api/users/6/
+
+   (Bedutravels) Ejemplo-02 $
+   ```
+   Sin más el usuario se elimina y se puede verificar en la vista web.

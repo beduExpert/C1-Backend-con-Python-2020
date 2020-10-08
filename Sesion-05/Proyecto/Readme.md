@@ -1,39 +1,83 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Proyecto
-
-## Conociendo los micro frameworks creando una micro aplicación web con Bottle.
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Proyecto
+## Creando un API para realizar las operaciones CRUD de una tabla
 
 ### OBJETIVOS
-- Conocer el flujo de información entre una petición POST desde el Navegador hasta la aplicación web creada usando el micro framework Bottle.
+- Agregar la relación entre los modelos __Tour__ y __Salida__.
+- Realizar operaciones de CRUD vía API para la tabla __Salida__ incluyendo los tours asociados.
 
-#### REQUISITOS
+### REQUISITOS
 1. Actualizar repositorio
+1. Usar la carpeta de trabajo `Sesion-05/Proyecto`
+1. Activar el entorno virtual __Bedutravels__
+1. Diagrama de entidad-relación del proyecto Bedutravels
 
-#### DESARROLLO
-1. Entendiendo a los frameworks: Creando la aplicación web `webapp/index.py` que muestre un formulario donde se capturen dos campos, email y contraseña. Cuando el formulario sea enviado, se mostrará una respuesta con un mensaje y los valores los campos capturados.
+   ![Diagrama entidad-relación](assets/bedutravels-modelo-er.png)
 
-   __Cambiarse a la carpeta `webapp`:__
-   ```console
-   Sesion-02/Proyecto $ cd webapp
-   Sesion-02/Proyecto/webapp $
+### DESARROLLO
+1. Se modifica el archivo `serializers.py` para que se muestre la lista de salidas:
+
+   ```python
+   class SalidaSerializer(serializers.HyperlinkedModelSerializer):
+       """ Serializador para atender las conversiones para Salida """
+       class Meta:
+           # Se define sobre que modelo actúa
+           model = Salida
+           # Se definen los campos a incluir
+           fields = ('id', 'fechaInicio', 'fechaFin', 'asientos', 'precio', 'tour')
    ```
 
-   __Ejecutando el script con:__
+   __Se agrega la url `/api/salidas/`:__
 
-   ```console
-   Sesion-02/Proyecto/webapp $ python index.py
-   Bottle v0.13-dev server starting up (using WSGIRefServer())...
-   Listening on http://localhost:8000/
-   Hit Ctrl-C to quit.
+   ```python
+   router.register(r'salidas', views.SalidaViewSet)   
    ```
 
-   Se puede acceder abriendo la siguiente url en algún navegador:
-   - http://localhost:8000
+   __Se agrega la vista:__
 
-   __Formulario a llenar:__
+   ```python
+   class SalidaViewSet(viewsets.ModelViewSet):
+       """
+       API que permite realizar operaciones con la tabla Salida
+       """
+       # Se define el conjunto de datos sobre el que va a operar la vista,
+       # en este caso, sobre todos las salidas disponibles.
+       queryset = Salida.objects.all().order_by('id')
 
-   ![Formulario vacío](assets/formulario-vacio.png)
+       # Se define el serializador encargado de transformar las peticiones
+       # de json a objetos django y viceversa.
+       serializer_class = SalidaSerializer
+   ```
 
-   __Respuesta al formulario:__
+   __El resultado debe ser como el siguiente:__
 
-   ![Respuesta a formulario](assets/formulario-respuesta.png)
+   ![Lista de salidas](assets/api-salidas-01.png)
+   ***
+
+1. Se actualiza el serializador `TourSerializer` en el archivo `Bedutravels/tours/serializers.py` para agregar el campo `salidas` para que muestre la lista de salidas por cada tour:
+
+   ```python        
+           # Se definen los campos a incluir
+           fields = ('id', 'slug', 'nombre', 'operador', 'tipoDeTour',
+               'descripcion', 'img', 'pais', 'zonaSalida', 'zonaLlegada',
+               'salidas')
+   ```
+   ***
+
+1. Acceso y uso de la __API__ `/api/tours`
+
+   __Para tener acceso al API abrir la siguiente url:__
+
+   http://localhost:8000/api/tours/
+
+   Se deberá de observar algo similar a lo siguiente:
+
+   ![bedutravels API tours con salidas](assets/api-salidas-02.png)
+
+   __Para tener acceso al detalle del tour con id=1 abrir la siguiente url:__
+
+   http://localhost:8000/api/tour/1/
+
+   Se deberá de observar algo similar a lo siguiente:
+
+   ![bedutravels API un tour](assets/api-salidas-03.png)
    ***

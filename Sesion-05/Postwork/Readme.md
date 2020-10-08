@@ -1,47 +1,27 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Postwork
-## Aplicar los conceptos de la clase a un Proyecto
+[`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Postwork
+## Aplicar los conceptos de la clase a tú Proyecto
 
 ### OBJETIVOS
- - Crear una micro aplicación web con Bottle que permita atender la petición de un formulario y su respuesta para tu Proyecto.
- - Aplicar los conceptos de Petición, Ruta y Vista.
+- Aplicar el concepto Django Rest a tú Proyecto
+- Crear cada operación CRUD para las tablas de tú Proyecto en el API
 
-#### REQUISITOS
-1. Constar con la carpeta del repo actualizada.
-1. Contar con las páginas del formulario y su respuesta en HTML y CSS.
-1. Usar la carpeta de trabajo `Sesion-02/Postwork`
-
-   ```sh
-   $ cd Sesion-02/Postwork
-
-   Sesion-02/Postwork $
-   ```
+### REQUISITOS
+1. Actualizar repositorio
+1. Usar la carpeta de trabajo `Sesion-05/Postwork`
 
 ### DESARROLLO
-1. Aplicando los frameworks: Crear la aplicación web `webapp/index.py` que muestre un formulario donde se capturen algunos campos relacionados con tú Proyecto. Cuando el formulario sea enviado, se mostrará una respuesta con un mensaje y opcionalmente los valores los campos capturados, eso dependerá de como esté definido en tú Proyecto.
+1. __INSTALACIÓN__ de Djanfo Rest Framework se realiza con el comando `pip install djangorestframework`
 
-   __Cambiarse a la carpeta `webapp`:__
-   ```console
-   Sesion-02/Postwork $ cd webapp
-   Sesion-02/Postwork/webapp $
-   ```
+   __Se actualiza el archivo `requeriments.txt` para incluir el módulo instalado__
 
-   __Ejecutando el script con:__
+1. Agregando Djanfo Rest Framework a la configuración en el archivo `settings.py` como una aplicación adicional.
 
-   ```console
-   Sesion-02/Postwork/webapp $ python index.py
-   Bottle v0.13-dev server starting up (using WSGIRefServer())...
-   Listening on http://localhost:8000/
-   Hit Ctrl-C to quit.
-   ```
+1. Crear la ruta en la url `/api/???` para cada tabla en tu modelo modificando el archivo `Proyecto/Proyecto/urls.py`.
 
-   Se puede acceder abriendo la siguiente url en algún navegador:
-   - http://localhost:8000
+1. Se crea la vista para cada tabla en el archivo `Proyecto/miapp/views.py` que hace uso de su serializador correspondiente.
 
-   __Formulario a llenar:__
+1. Se crea el serializador para cada tabla en el archivo `Proyecto/miapp/serializers.py`.
 
-   ![Vista del formulario a llenar de tú Proyecto](assets/formulario.png)
+1. Validar el acceso y uso de la __API__ `/api/???` en la url http://localhost:8000/api/???
 
-   __Respuesta al formulario:__
-
-   ![Vista del la respuesta después de haber llenado el formulario](assets/formulario-respuesta.png)
-   ***
+   Realizar operaciones de agregar, listar, modificar y eliminar registros a cada una de las tablas.

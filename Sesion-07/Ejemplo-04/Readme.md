@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 08`](../Readme.md) > Ejemplo-04
+[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Ejemplo-04
 ## Archivos estáticos y base de datos en producción
 
 ### OBJETIVOS
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio __Backend-con-Python__
-1. La carpeta de referencia es `Sesion-08/Ejemplo-04/Bedutravels/`
+1. La carpeta de referencia es `Sesion-07/Ejemplo-04/Bedutravels/`
 1. Contar con repo __Bedutravels__ en equipo local
 1. La carpeta de trabajo debe ser `Bedutravels/`
 1. Contar con repo __Bedutravels__ en Github
@@ -215,7 +215,7 @@
    Para ellos, lo primero es agregar el archivos tours.json al repo local __Bedutravles__:
 
    ```console
-   (Bedutravels) Bedutravels (master)$ cp -a Backend-con-Python/Sesion-08/datos .
+   (Bedutravels) Bedutravels (master)$ cp -a Backend-con-Python/Sesion-07/datos .
    (Bedutravels) Bedutravels (master)$ git add .
    (Bedutravels) Bedutravels (master)$ git commit -m "Agregando datos"
    (Bedutravels) Bedutravels (master)$ git push

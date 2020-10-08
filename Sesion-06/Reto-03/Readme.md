@@ -1,4 +1,4 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Reto-03
+[`Backend con Python`](../../Readme.md) > [`Sesión 06`](../Readme.md) > Reto-03
 ## Definiendo mutaciones (operaciones) para el API GraphQL
 
 ### OBJETIVOS
@@ -7,7 +7,7 @@
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-07/Reto-03`
+1. Usar la carpeta de trabajo `Sesion-06/Reto-03`
 1. Activar el entorno virtual __Bedutravels__
 1. Diagrama de entidad-relación del proyecto Bedutravels
    ![Diagrama entidad-relación](assets/bedutravels-modelo-er.png)

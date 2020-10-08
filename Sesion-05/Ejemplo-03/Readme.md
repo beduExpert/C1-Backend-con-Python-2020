@@ -1,39 +1,91 @@
-`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Ejemplo-03
+`Fullstack con Python` > [`Backend con Python`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-03
+## Creando un API para realizar las operaciones CRUD de una tabla con relaciones uno a muchos.
 
-## Conociendo la interface WSGI creando una micro aplicación web con Python.
+### OBJETIVOS
+- Agregar el modelo __Tour__ a el __API__ de la Bedutravels
+- Realizar operaciones de CRUD vía API para la tabla __Tour__
 
-### OBJETIVO
-Comprender el flujo de información entre un servidor web y una aplicación en Python por medio de la interface WSGI (Web Server Gateway Interface).
-
-#### REQUISITOS
+### REQUISITOS
 1. Actualizar repositorio
+1. Usar la carpeta de trabajo `Sesion-05/Ejemplo-03`
+1. Activar el entorno virtual __Bedutravels__
+1. Diagrama de entidad-relación del proyecto Bedutravels
 
-#### DESARROLLO
-1. Entendiendo la interface WSGI: Creando la aplicación web en la carpeta `webapp/` con el nombre `info.py` que muestre la información de la variables de ambiente que recibe una aplicación web
+   ![Diagrama entidad-relación](assets/bedutravels-modelo-er.png)
 
-   __Cambiarse a la carpeta `webapp`:__
-   ```console
-   Sesion-02/Ejemplo-03 $ cd webapp
-   Sesion-02/Ejemplo-03/webapp $
+### DESARROLLO
+1. Se crea la ruta para la url `/api/tours` modificando el archivo `Bedutravels/Bedutravels/urls.py`:
+
+   ```python
+   router.register(r'tours', views.TourViewSet)
    ```
-
-   __Ejecutando el script con:__
-   ```console
-   Sesion-02/Ejemplo-03/webapp $ python info.py
-   Esuchando en localhost:8000... [Presiona Control+C para terminar!]
-
-   Abre la siguiente url en tu navegador:
-
-   	http://localhost:8000
-   ```
-   El servidor se inicia en localhost del equipo en el puerto 8000 quedando en espera de peticiones hasta que se presione Control+C.
-
-   Se puede acceder abriendo la siguiente url en algún navegador:
-   - http://localhost:8000
-
-1. ¿Qué sucede si se abre la siguiente petición?
-
-   - http://localhost:8000/?nombre=rctorr
-
-   Lo anterior es una petición GET que bien podría ser creada por un formulario donde se está solicitando el nombre al usuario...
    ***
+
+1. Se crea la vista para el api de la tabla __Tour__ aunque en este caso en lugar de generar y regresar HTML será JSON.
+
+   __Abrimos el archivo `Bedutravels/tours/views.py` y agregar el siguiente contenido:__
+
+   ```python
+   from .serializers import UserSerializer, ZonaSerializer ,TourSerializer
+
+   [...al final agregar...]
+   class TourViewSet(viewsets.ModelViewSet):
+      """
+      API que permite realizar operaciones en la tabla Tour
+      """
+      # Se define el conjunto de datos sobre el que va a operar la vista,
+      # en este caso sobre todos los tours disponibles.
+      queryset = Tour.objects.all().order_by('id')
+      # Se define el Serializador encargado de transformar la peticiones
+      # en formato JSON a objetos de Django y de Django a JSON.
+      serializer_class = TourSerializer
+   ```
+   ***
+
+1. Se crea el serializador `TourSerializer` en el archivo `Bedutravels/tours/serializers.py`.
+
+   ```python
+   from .models import User, Zona, Tour
+
+   class TourSerializer(serializers.HyperlinkedModelSerializer):
+       """ Serializador para atender las conversiones para Tour """
+       class Meta:
+           # Se define sobre que modelo actúa
+           model = Tour
+           # Se definen los campos a incluir
+           fields = ('id', 'nombre', 'slug', 'operador', 'tipoDeTour',
+            'descripcion', 'img', 'pais', 'zonaSalida', 'zonaLlegada')
+
+
+   class ZonaSerializer(serializers.HyperlinkedModelSerializer):
+       """ Serializador para atender las conversiones para Zona """
+
+       # Se define la relación de una zona y sus tours realizados
+       tours = TourSerializer(many=True, read_only=True)
+
+       class Meta:
+           # Se define sobre que modelo actúa
+           model = Zona
+           # Se definen los campos a incluir
+           fields = ('id', 'nombre', 'descripcion', 'latitud', 'longitud', 'tours_salida', 'tours_llegada')
+   ```
+   __Nota:__ Es importante el nuevo orden de las clases
+   ***
+
+1. Acceso y uso de la __API__ `/api/tours`
+
+   __Para tener acceso al API abrir la siguiente url:__
+
+   http://localhost:8000/api/tours/
+
+   Se deberá de observar algo similar a lo siguiente:
+
+   ![bedutravels API Tours](assets/api-tours-01.png)
+
+   __Para tener acceso a la lista de tours de la zona con id=1 abrir la siguiente url:__
+
+   http://localhost:8000/api/zonas/1/
+
+   Se deberá de observar algo similar a lo siguiente:
+
+   ![bedutravels API Tours](assets/api-tours-02.png)
