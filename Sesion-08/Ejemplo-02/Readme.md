@@ -131,6 +131,10 @@ def test_get_absolute_url(self):
 
 1. Ejecute las pruebas ahora. 
 
+```console
+python3 manage.py test
+```
+
 ![](img/3.png)
 
 
