@@ -130,3 +130,28 @@
 	```
 	
 ![](img/3.jpeg)
+
+1. Aquí vemos que tuvimos una falla de prueba, y podemos ver exactamente qué función falló y por qué (se espera esta falla, porque False no es True!).
+
+### Mostrando más información de las pruebas
+
+1. Si deseas obtener más información sobre la ejecución de prueba, puede cambiar el nivel de detalle. Por ejemplo, para enumerar los éxitos y fallas de la prueba (y una gran cantidad de información sobre cómo está configurada la base de datos de prueba), puede establecer la verbosidad en "2" como se muestra:
+
+	```console
+	python3 manage.py test --verbosity 2
+	```
+	
+![](img/4.png)
+
+### Ejecutando pruebas especificas
+
+Si desea ejecutar un subconjunto de sus pruebas, puede hacerlo especificando la ruta de puntos completa al paquete (s), módulo, TestCase subclase o metodo:
+
+	```
+	python3 manage.py test catalog.tests   # Run the specified module
+	python3 manage.py test catalog.tests.test_models  # Run the specified module
+	python3 manage.py test catalog.tests.test_models.YourTestClass # Run the specified class
+	python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one_equals_two  # Run the specified method
+	```
+	
+![](img/5.png)
