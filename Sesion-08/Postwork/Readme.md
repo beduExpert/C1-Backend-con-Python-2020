@@ -1,17 +1,18 @@
-[`Backend con Python`](../../Readme.md) > [`Sesión 07`](../Readme.md) > Postwork
+[`Backend con Python`](../../Readme.md) > [`Sesión 08`](../Readme.md) > Postwork
 ## Aplicar los conceptos de la clase a tú Proyecto.
 
 ### OBJETIVOS
-- Generar pruebas Pruebas unitarias
-- Generar pruebas Pruebas de regresión
-- Generar pruebas Pruebas de integración
-- Implementar Common threats/protections
+- Preparar los archivos de Test Unitarios
+- Correr pruebas de todos los modelos de su proyecto personal
+- Correr pruebas de todos los formularios de su proyecto personal
+- Validar el comportamiento de vistas
+- Probar la inyección de  JavaScript en tu proyecto Personal
 
 
 ### REQUISITOS
 1. Actualizar repositorio
-1. Usar la carpeta de trabajo `Sesion-07/Postwork`
+1. Usar la carpeta de trabajo `Sesion-08/Postwork`
 1. Contar con repo local del Proyecto funcional
 
-### DESARROLLO
+
 

@@ -3,8 +3,7 @@
 
 ### OBJETIVOS
 - Hacer uso de las herramientas de test con las que cuenta Django
-- Aplicar las caraacterísticas de seguridad en Django
-- Identificar las buenas prácticas y el uso de Secret Key
+- Aplicar las características de seguridad en Django
 
 ### ORGANIZACIÓN DE CLASE
 
@@ -18,7 +17,9 @@
    - [Reto 02](Reto-02)
  - Test de Vistas
    - [Ejemplo 04](Ejemplo-04)
-   - [Reto 03](Reto-03)
+ - Secuencias de comandos entre sitios (XSS)
+   - [Ejemplo 05](Ejemplo-05)
+ 
 
 ### POSTWORK
  - Aplicar los conceptos de la clase a tú Proyecto
