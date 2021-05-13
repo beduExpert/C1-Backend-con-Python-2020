@@ -1,11 +1,12 @@
 [`Backend con Python`](../Readme.md) > `Sesión 06`
-## Django GraphQL con Graphene
+# Sesión 6: Django GraphQL con Graphene
 
-### OBJETIVOS
+## :dart: Objetivos
+
 - Conocer Django Grahene
 - Crear una API GraphQL para realizar operaciones CRUD a los modelos del proyecto usando Django Graphene
 
-### ORGANIZACIÓN DE CLASE
+## 📂 Organización de la clase
 
  - Conociendo e instalando Django Graphene
    - [Ejemplo 01](Ejemplo-01)
@@ -18,6 +19,6 @@
  - Creando una API GraphQL que permita realizar consultas y todas las operaciones CRUD sobre una tabla
    - [Proyecto](Proyecto)
 
-### POSTWORK
+## Postwork
  - Aplicar los conceptos de la clase a tú Proyecto
    - [Ver lineamientos](Postwork)
