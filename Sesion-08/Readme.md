@@ -1,11 +1,12 @@
 [`Backend con Python`](../Readme.md) > `Sesión 08`
-## Debug, Testing y Seguridad
+# Sesión 8: Debug, Testing y Seguridad
 
-### OBJETIVOS
+## :dart: Objetivos
+
 - Hacer uso de las herramientas de test con las que cuenta Django
 - Aplicar las características de seguridad en Django
 
-### ORGANIZACIÓN DE CLASE
+## 📂 Organización de la clase
 
  - Descripción general de la estructura de prueba
    - [Ejemplo 01](Ejemplo-01)
@@ -21,6 +22,6 @@
    - [Ejemplo 05](Ejemplo-05)
  
 
-### POSTWORK
+## Postwork
  - Aplicar los conceptos de la clase a tú Proyecto
    - [Ver lineamientos](Postwork)
