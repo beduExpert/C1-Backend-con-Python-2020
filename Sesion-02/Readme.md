@@ -1,17 +1,22 @@
 `Fullstack con Python` > [`Backend con Python`](../Readme.md) > `Sesión 02`
-## Bases de datos SQL para Django
+# Sesión 2: Bases de datos SQL para Django
 
-### OBJETIVOS
+## :dart: Objetivos
+
 El alumno identificará las bases de datos compatibles con Django, instalará e inicializará un servidor con MySQL, PostgreSQL y SQLite3 para realizar la configuración con Django, realizará operaciones CRUD por medio de Python y generará reportes de datos a partir de una base datos por medio de Python.
 
-### ORGANIZACIÓN DE CLASE
+
+## 📂 Organización de la clase
+
  - Inicializando Django con SQLite3
    - [Ejemplo 01](Ejemplo-01)
  - Inicializando Django con MySQL
    - [Ejemplo 02](Ejemplo-02)
  - Inicializando Django con PostgreSQL
    - [Ejemplo 03](Ejemplo-03)
-  - Inicializando un servidor MariaDB y una base de datos haciendo uso de contenedores
+  - Inicializando un servidor MariaDB y una base de datos haciendo uso de 
+
+Contenedores
    - [Ejemplo 04](Ejemplo-04)
    - [Reto 01](Reto-01)
  - Operación READ: Lectura de datos con Python y MariaDB
@@ -24,6 +29,6 @@ El alumno identificará las bases de datos compatibles con Django, instalará e 
  - Automatizando la ejecución de archivos SQL con Python
    - [Ejemplo 07](Ejemplo-07)
 
-### POSTWORK
+## Postwork
  - Bases de datos relacionales con Python y MariaDB aplicado a tú Proyecto.
    - [Ver lineamientos](Postwork)
