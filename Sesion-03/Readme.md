@@ -1,10 +1,11 @@
 [`Backend con Python`](../Readme.md) > `Sesión 03`
-## Modelos, migraciones, consultas y forms
+# Sesión 3: Modelos, migraciones, consultas y forms
 
-### OBJETIVOS
+## :dart: Objetivos
+
 El alumno realizará consultas mediante el shell de django, construirá vistas que hagan uso de los modelos logrando la construcción de páginas con información dinámica, identificará el uso tablas en un modelo relacional creando relaciones entre tablas, implementará el uso de formularios 
 
-### ORGANIZACIÓN DE CLASE
+## 📂 Organización de la clase
 
  - Creando una tabla con el modelo de datos de Django
    - [Ejemplo 01](Ejemplo-01)
@@ -25,6 +26,6 @@ El alumno realizará consultas mediante el shell de django, construirá vistas q
  - Definiendo y agregando una página con formulario de la aplicación web.
    - [Proyecto](Proyecto)
 
-### POSTWORK
+## Postwork
  - Aplicar los conceptos de la clase a un Proyecto
    - [Ver lineamientos](Postwork)
