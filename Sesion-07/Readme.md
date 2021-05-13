@@ -1,13 +1,14 @@
 [`Backend con Python`](../Readme.md) > `Sesión 07`
-## Deploy: Heroku, Amazon EC2, Amazon S3,
+# Sesión 7: Deploy: Heroku, Amazon EC2, Amazon S3,
 
-### OBJETIVOS
+## :dart: Objetivos
+
 - Conocer algunos proveedores para hospedar nuestra aplicación web creada en Django.
 - Elegir un proveedor y obtener los datos y requisitos para publicar nuestra aplicación.
 - Configurar nuestra aplicación para producción
 - Configurar el entorno de producción en el proveedor para ejecutar nuestra aplicación web.
 
-### ORGANIZACIÓN DE CLASE
+## 📂 Organización de la clase
 
  - Proveedores, requisitos, registro y bases de datos.
    - [Ejemplo 01](Ejemplo-01)
@@ -18,6 +19,6 @@
  - Archivos estáticos y base de datos en producción
    - [Ejemplo 04](Ejemplo-04)
 
-### POSTWORK
+## Postwork
  - Aplicar los conceptos de la clase a tú Proyecto
    - [Ver lineamientos](Postwork)
