@@ -1,10 +1,11 @@
 [`Backend con Python`](../Readme.md) > `Sesión 04`
-## Class Based Views,User Authentication y plugins para Django
+# Sesión 4: Class Based Views,User Authentication y plugins para Django
 
-### OBJETIVOS
+## :dart: Objetivos
+
 El Alumno será capaz de crear un sistema autenticación, hará uso de la creación de rutas y vistas para eliminar registros, identificará la asignación de permisos.
 
-### ORGANIZACIÓN DE CLASE
+## 📂 Organización de la clase
 
  - Definiendo y agregando autenticación de entrada usando vistas personalizadas y el modelo User de Django.
    - [Ejemplo 01](Ejemplo-01)
@@ -17,6 +18,6 @@ El Alumno será capaz de crear un sistema autenticación, hará uso de la creaci
 - Definiendo elementos necesarios para otorgar permisos para eliminar datos.  
   - [Proyecto](Proyecto)
 
-### POSTWORK
+## Postwork
  - Aplicar los conceptos de la clase a tú Proyecto
    - [Ver lineamientos](Postwork)
